@@ -11,7 +11,8 @@
     --light-blue-clr: #117BF5;
 }
 body{
-    background-image: url(/i-Service-Group-5-/SIGNUP-PAGES/user-signups/assets/sign\ up\ screen\ pic.png);
+    /* background-image: url(/i-Service-Group-5-/SIGNUP-PAGES/user-signups/assets/sign\ up\ screen\ pic.png); */
+    background-image: url(/i-Service-Group-5-/LOGIN-PAGES/user-login/assets/login\ page\ \(1\).png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;

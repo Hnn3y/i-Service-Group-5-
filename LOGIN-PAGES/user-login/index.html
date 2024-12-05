@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/ee600e9388.js" crossorigin="anonymous"></script>
+    <title>User Sign-in</title>
+</head>
+<body>
+    <div class="overlay"></div>
+    <header class="border ">
+        <div class="logo">LOGO</div>
+    </header>
+    <form action="" class=" mt-5 flex flex-col items-center gap-2">
+        <h2 class="text-3xl font-bold">Login</h2>
+        <div class="form-content w-[20rem] flex flex-col gap-4 rounded-lg">
+            <div class="form-data w-full flex flex-col gap-4">
+                <div class="name-input-box w-full">
+                    <div class="icon-input w-full text-[#ffffff] h-10 px-2 flex items-center gap-2 border rounded-lg">
+                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                        <input class="w-full bg-transparent" type="text" placeholder="Email Address/Phone number">
+                    </div>
+                    <label for="" class="validation hidden">Invalid name</label>
+                </div>
+                <div class="phone-input-box w-full">
+                    <div class="icon-input w-full text-[#ffffff] h-10 px-2 flex items-center gap-2 border rounded-lg">
+                        <i class="fa fa-lock" aria-hidden="true"></i>
+                        <input class="w-full bg-transparent" type="password" placeholder="Enter Password">
+                    </div>
+                    <label for="" class="validation hidden">Invalid Password</label>
+                </div>
+                
+            </div>
+            <div class="form-buttons flex flex-col items-center gap-4" >
+                <input class="w-full h-10 bg-[#fff] border rounded-lg" type="submit" value="Sign up">
+                <a href=""  class="w-full h-10 bg-[#fff] flex justify-center items-center border rounded-lg">Sign Up With Facebook</a>
+                <a href="" class="text-[#fff] text-sm self-start">Forgotten password?</a>
+            </div>
+            
+        </div>
+        <p class="text-[#1133F5]">Don't have an account yet? <a href="/i-Service-Group-5-/SIGNUP-PAGES/user-signups/index.html" class="font-bold">Sign up</a></p>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html>

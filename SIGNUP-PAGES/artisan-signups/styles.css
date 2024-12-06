@@ -11,12 +11,11 @@
     --light-blue-clr: #117BF5;
 }
 body{
-    /* background-image: url(/i-Service-Group-5-/SIGNUP-PAGES/user-signups/assets/sign\ up\ screen\ pic.png); */
-    background-image: url(/i-Service-Group-5-/LOGIN-PAGES/user-login/assets/login\ page\ \(1\).png);
+    background-image: url(/i-Service-Group-5-/SIGNUP-PAGES/user-signups/assets/sign\ up\ screen\ pic.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    height: 100vh;
+    /* height: 100vh; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -34,12 +33,18 @@ body .overlay{
 form .form-content{
     background-color: var(--trans-ascent-clr);
     padding: 2rem 1rem;
+
+
 }
-input[type="submit"],
-.form-buttons a:not(a:last-child){
-    color: var(--ascent-clr);
-    font-weight: 700;
+form .form-data{
+    display: grid;
+    /* grid-template-columns: repeat(2, 1fr); */
 }
+
 input::placeholder{
     color: rgba(255, 255, 255, .8);
+}
+input[type="submit"]{
+    color: var(--ascent-clr);
+    font-weight: 700;
 }

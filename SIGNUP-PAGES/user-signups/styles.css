@@ -34,6 +34,11 @@ form .form-content{
     background-color: var(--trans-ascent-clr);
     padding: 2rem 1rem;
 }
+input[type="submit"],
+.form-buttons a{
+    color: var(--ascent-clr);
+    font-weight: 700;
+}
 input::placeholder{
     color: rgba(255, 255, 255, .8);
 }

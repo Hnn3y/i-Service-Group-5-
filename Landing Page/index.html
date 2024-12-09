@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--Favicon-->
+  <link rel="icon" href="/Images/Without background .png" type="image/x-icon">
+  <title>iService</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 font-sans">
+
+  <!-- Navbar -->
+  <nav class="bg-white shadow-md">
+    <div class="max-w-7xl mx-auto px-4 flex items-center justify-between py-4">
+      <button id="hamburgerButton" class="md:hidden text-gray-700 focus:outline-none">
+        <svg class="w-8 h-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+        </svg>
+      </button>
+      
+      <!-- Mobile Menu -->
+      <div id="mobileMenu" class="hidden md:hidden absolute top-16 left-0 w-full bg-white shadow-lg">
+        <ul class="flex flex-col space-y-2 py-4 px-6">
+          <li><a href="#" class="text-gray-700 hover:text-blue-600">Home</a></li>
+          <li><a href="#" class="text-gray-700 hover:text-blue-600">About</a></li>
+          <li><a href="#" class="text-gray-700 hover:text-blue-600">Services</a></li>
+          <li><a href="#" class="text-gray-700 hover:text-blue-600">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Logo -->
+      <img src="/Images/Without background .png" alt="iService Logo" class="w-12 mx-auto md:mx-0">
+
+          <!-- Desktop Menu -->
+      <div class="hidden md:flex items-center justify-center space-x-6 py-2">
+        <a href="#" class="text-gray-700 hover:text-blue-600">Home</a>
+        <a href="#" class="text-gray-700 hover:text-blue-600">Services</a>
+        <a href="#" class="text-gray-700 hover:text-blue-600">About Us</a>
+        <a href="#" class="text-gray-700 hover:text-blue-600">Contact Us</a>
+      </div>
+
+      <button class="px-6 py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700">
+        Sign Up
+      </button>
+
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="bg-blue-100 bg-[url('/Images/etienne-girardet-sgYamIzhAhg-unsplash.jpg')] bg-center bg-cover bg-blend-normal hover:bg-blend-darken">
+    <div class="max-w-7xl mx-auto px-4 py-20 flex flex-col items-center md:items-start text-white">
+      <!-- Text Content -->
+      <div class="bg-black bg-opacity-60 p-8 rounded-lg text-center md:text-left md:w-1/2">
+        <h1 class="text-4xl font-bold leading-tight">
+          Trust Us To Get <br> The Work Done
+        </h1>
+        <p class="text-lg my-4">
+          Get connected to skilled and reliable Artisans within your locality from the comfort of your home.
+        </p>
+        <div class="space-y-2">
+          <p class="font-semibold">1000+ Jobs completed</p>
+          <p class="font-semibold">1000+ Satisfied clients</p>
+        </div>
+        <button class="mt-6 px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700">
+          Sign Up
+        </button>
+      </div>
+    </div>
+  </section>
+  
+
+  <!-- Features Section -->
+  <section class="bg-white py-16">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+        <!-- Feature 1 -->
+        <div class="flex items-start space-x-4">
+          <div class="w-25 h-25 bg-blue-600 rounded-full flex items-center justify-center">
+            <span class="text-white text-2xl font-bold">✔</span>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold text-gray-800">Verified Artisans You Can Trust</h3>
+            <p class="text-gray-600">
+              Every artisan undergoes a thorough verification process to ensure they meet our standards of skill, credibility, and professionalism.
+            </p>
+          </div>
+        </div>
+        <!-- Feature 2 -->
+        <div class="flex items-start space-x-4">
+          <div class="w-25 h-25 bg-blue-600 rounded-full flex items-center justify-center">
+            <span class="text-white text-2xl font-bold">✔</span>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold text-gray-800">Tailored Matches for Your Needs</h3>
+            <p class="text-gray-600">
+              Easily find artisans based on your location, job requirements, and budget with our smart matching system.
+            </p>
+          </div>
+        </div>
+        <!-- Feature 3 -->
+        <div class="flex items-start space-x-4">
+          <div class="w-25 h-25 bg-blue-600 rounded-full flex items-center justify-center">
+            <span class="text-white text-2xl font-bold">✔</span>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold text-gray-800">Secure Transactions and Job Tracking</h3>
+            <p class="text-gray-600">
+              Enjoy peace of mind with secure in-app payments and real-time updates on your job's progress.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+<!--Landing Page Seconf Part-->
+  <section class="visitors bg-blue-600 p-0 pt-32" id="visitors">
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+        <div class="headlines text-white flex flex-col justify-center sm:mt-[-15rem] md:order-last">
+            <h4 class="text-3xl sm:text-4xl font-bold">Two strong headlines to turn visitors <br>to Users of the app</h4>
+            <p class="text-xl sm:text-2xl font-semibold mt-4">Get connected to skilled and reliable Artisans within <br> your locality from the comfort of your home</p>
+            <ul class="list-disc pl-5 font-semibold m-4">
+                <li class="text-black m-2 text-lg marker:text-white">What benefits will the users enjoy from using the app</li>
+                <li class="text-black m-2 text-lg marker:text-white">What benefits will the users enjoy from using the app</li>
+                <li class="text-black m-2 text-lg marker:text-white">What benefits will the users enjoy from using the app</li>
+                <li class="text-black m-2 text-lg marker:text-white">What benefits will the users enjoy from using the app</li>
+                <li class="text-black m-2 text-lg marker:text-white">What benefits will the users enjoy from using the app</li>
+            </ul>
+        </div>
+        <div class="image">
+            <img src="assets/Photoroom-20241204_023943.png" class="w-full h-auto rounded-lg" alt="Visitors">
+        </div>
+    </div>
+</section>
+
+
+<section class="bg-gray-300 p-20 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+    <div class="max-w-sm mx-auto p-6 bg-white rounded-[5px] shadow-lg relative">
+        <p class="mt-6 mb-4 text-black-700 text-lg pb-12">
+            A testimonial describing what the person thinks about the services rendered.
+        </p>
+        <div class="space-x-2">
+            <div class="flex-shrink-0">
+                <img src="assets/image-avatar.webp" alt="User avatar" class="w-16 h-16 rounded-full border-4 border-white shadow-md">
+            </div>
+            <div>
+                <h4 class="text-lg font-semibold">Jane Doe</h4>
+                <p class="text-sm text-black-500">Customer</p>
+            </div>
+        </div>
+        <!-- Favicon positioned at the bottom right -->
+        <img src="assets/favicon-32x32.png" alt="Favicon" class="absolute bottom-4 right-4 w-8 h-8">
+    </div>
+    <div class="max-w-sm mx-auto p-6 bg-white rounded-[5px] shadow-lg relative">
+        <p class="mt-6 mb-4 text-black-700 text-lg pb-12">
+            A testimonial describing what the person thinks about the services rendered.
+        </p>
+        <div class="space-x-2">
+            <div class="flex-shrink-0">
+                <img src="assets/image-avatar.webp" alt="User avatar" class="w-16 h-16 rounded-full border-4 border-white shadow-md">
+            </div>
+            <div>
+                <h4 class="text-lg font-semibold">Jane Doe</h4>
+                <p class="text-sm text-black-500">Customer</p>
+            </div>
+        </div>
+        <!-- Favicon positioned at the bottom right -->
+        <img src="assets/favicon-32x32.png" alt="Favicon" class="absolute bottom-4 right-4 w-8 h-8">
+    </div>
+    <div class="max-w-sm mx-auto p-6 bg-white rounded-[5px] shadow-lg relative">
+        <p class="mt-6 mb-4 text-black-700 text-lg pb-12">
+            A testimonial describing what the person thinks about the services rendered.
+        </p>
+        <div class="space-x-2">
+            <div class="flex-shrink-0">
+                <img src="assets/image-avatar.webp" alt="User avatar" class="w-16 h-16 rounded-full border-4 border-white shadow-md">
+            </div>
+            <div>
+                <h4 class="text-lg font-semibold">Jane Doe</h4>
+                <p class="text-sm text-black-500">Customer</p>
+            </div>
+        </div>
+        <!-- Favicon positioned at the bottom right -->
+        <img src="assets/favicon-32x32.png" alt="Favicon" class="absolute bottom-4 right-4 w-8 h-8">
+    </div>
+</section>
+
+<section class="relative w-full bg-cover bg-center" style="background-image: url('assets/paint.jpg');">
+    <div class="absolute inset-0 bg-black opacity-50"></div> <!-- Overlay to darken background image -->
+    <div class="relative z-10 flex flex-col items-center justify-center min-h-screen text-center text-white">
+        <p class="text-lg font-semibold mb-4">Skilled Hands, Trusted Results</p>
+        <h1 class="text-4xl sm:text-5xl font-bold mb-7">Verified, Qualified, <br> Credible-Find Artisans <br>You Can Rely On</h1>
+        <a href="#signup" class="bg-blue-800 hover:bg-blue-510 font-semibold text-white py-3 px-8 rounded-full text-lg">Sign Up</a>
+    </div>
+</section>
+
+<footer class="bg-white py-4">
+    <div class="max-w-7xl mx-auto px-6 flex flex-row justify-between items-center space-x-8">
+        <div class="flex items-center">
+            <img src="assets/LOGO.png" alt="Logo" class="h-10 w-auto sm:h-12">
+        </div>
+
+        <div class="flex flex-row space-x-8">
+            <a href="#about" class="text-black-700 font-bold hover:text-blue-600 text-sm sm:text-base md:text-lg">About Us</a>
+            <a href="#contact" class="text-black-700 font-bold hover:text-blue-600 text-sm sm:text-base md:text-lg">Contact Us</a>
+            <a href="#faqs" class="text-black-700 font-bold hover:text-blue-600 text-sm sm:text-base md:text-lg">FAQs</a>
+            <a href="#follow" class="text-black-700 font-bold hover:text-blue-600 text-sm sm:text-base md:text-lg">Follow Us</a>
+        </div>
+    </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

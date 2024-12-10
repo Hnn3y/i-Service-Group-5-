@@ -9,4 +9,4 @@
 ![Landing Page Screenshot](/Images/Screenshot%20(140).png)
 ![Landing Page Screenshot](/Images/Screenshot%20(141).png)
 
-More details about the project can be found on[website](https://github.com/Hnn3y).
+More details about the project can be found on [my Github](https://github.com/Hnn3y).

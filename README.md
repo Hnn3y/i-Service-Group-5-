@@ -6,7 +6,7 @@
 # This branch is for the Arranged Pages 
 
 ## Starting with the Sign Up Screen
-
+![Sign-up Page Screenshot](/Images/Screenshot%20(142).png)
 
 
 More details about the project can be found in my [Github](https://github.com/Hnn3y).

@@ -22,7 +22,7 @@
 ## Artisan Sign Up Screen
 
 ## Login Page
-![Sign-up Page Screenshot](/Images/Screenshot%20(143).png)
+![Sign-up Page Screenshot](/Images/Screenshot%20(147).png)
 
 ## Phone Number Verification Page
 

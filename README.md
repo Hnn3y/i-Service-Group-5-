@@ -13,21 +13,35 @@
 ## Auth Selection Screen
 ![Sign-up Page Screenshot](/Images/Screenshot%20(143).png)
 
-## Login Page
-![Sign-up Page Screenshot](/Images/Screenshot%20(143).png)
-
 ## Sign-up Selection Screen
 ![Sign-up Page Screenshot](/Images/Screenshot%20(144).png)
 
-## Sign Up Screen.
+## User Sign Up Screen.
 ![Sign-up Page Screenshot](/Images/Screenshot%20(142).png)
+
+## Artisan Sign Up Screen
+
+## Login Page
+![Sign-up Page Screenshot](/Images/Screenshot%20(143).png)
+
+## Phone Number Verification Page
+
+## Verification Confirmation Page 
 
 ## Booking Screen
 ![Sign-up Page Screenshot](/Images/Screenshot%20(137).png)
 ![Sign-up Page Screenshot](/Images/Screenshot%20(138).png)
 
+## Find Experts Screen
+
+## Booking
+
+## Booking Secured
+
 
 ## Service Provider Page.
+![Sign-up Page Screenshot](/Images/Screenshot%20(145).png)
+![Sign-up Page Screenshot](/Images/Screenshot%20(146).png)
 
 
 More details about the project can be found in my [Github](https://github.com/Hnn3y).

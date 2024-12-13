@@ -8,7 +8,6 @@
   <link rel="stylesheet" href="styles.css">
   <title>Login Page</title>
   <script src="https://cdn.tailwindcss.com"></script>
- 
 </head>
 <body class="bg-500 h-screen flex flex-col justify-center items-center relative">
 
@@ -17,7 +16,6 @@
     <!-- Logo and Title -->
     <div class="text-center mb-6">
       <div class="flex justify-center items-center gap-4">
-        <!-- Replace this with your logo image -->
         <div class="rounded-full p-2">
           <img src="/Images/Without background .png" alt="Logo" class="h-16 w-16 object-contain">
         </div>
@@ -26,7 +24,7 @@
     </div>
 
     <!-- Form Fields -->
-    <form class="bg-blue-700 p-6 rounded-lg">
+    <form id="loginForm" class="bg-blue-700 p-6 rounded-lg">
       <!-- Email Input -->
       <div class="mb-4">
         <label for="email" class="sr-only">Email Address/Phone Number</label>
@@ -56,14 +54,14 @@
 
       <!-- Login Button -->
       <div class="mb-4 flex justify-center">
-        <button type="button" class="w-3/4 bg-white text-blue-500 py-2 px-4 rounded-md hover:bg-blue-600 hover:text-white transition duration-300">
+        <button type="submit" class="w-3/4 bg-white text-blue-500 py-2 px-4 rounded-md hover:bg-blue-600 hover:text-white transition duration-300">
           Login
         </button>
       </div>
 
       <!-- Facebook Login Button -->
       <div class="mb-4 flex justify-center">
-        <button type="button" class="w-3/4 bg-white text-blue-500 py-2 px-4 rounded-md flex items-center justify-center gap-2 hover:bg-blue-600 hover:text-white transition duration-300">
+        <button type="button" id="facebookLogin" class="w-3/4 bg-white text-blue-500 py-2 px-4 rounded-md flex items-center justify-center gap-2 hover:bg-blue-600 hover:text-white transition duration-300">
           <i class="fab fa-facebook-f"></i>
           Login With Facebook
         </button>
@@ -75,5 +73,7 @@
       <p class="text-sm text-black">Don’t have an account yet? <a href="#" class="text-blue-500 font-medium hover:underline">Sign Up</a></p>
     </div>
   </div>
+
+  <script src="script.js"></script>
 </body>
 </html>

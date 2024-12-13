@@ -1,45 +1,43 @@
-document.getElementById('loginForm').addEventListener('submit', async (event) => {
-    event.preventDefault();
+document.getElementById('loginForm').addEventListener('submit', function (event) {
+    event.preventDefault(); 
+  
     const email = document.getElementById('email').value;
     const password = document.getElementById('password').value;
-
-    try {
-      const response = await fetch('https://your-backend-api.com/login', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ email, password }),
+  
+    fetch('https://your-backend-api.com/login', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ email: email, password: password }), 
+    })
+      .then((response) => response.json()) 
+      .then((data) => {
+        if (data.success) {
+          alert('Login successful!'); 
+        } else {
+          alert(`Login failed: ${data.message}`); 
+        }
+      })
+      .catch((error) => {
+        console.error('Error:', error); 
+        alert('Something went wrong. Please try again.'); 
       });
-
-      const data = await response.json();
-
-      if (response.ok) {
-        alert('Login successful!');
-      } else {
-        alert(`Error: ${data.message}`);
-      }
-    } catch (error) {
-      console.error('Error during login:', error);
-      alert('An error occurred. Please try again.');
-    }
   });
-
-  document.getElementById('facebookLogin').addEventListener('click', async () => {
-    try {
-      const response = await fetch('https://your-backend-api.com/auth/facebook', {
-        method: 'GET',
+  
+  document.getElementById('facebookLogin').addEventListener('click', function () {
+    fetch('https://your-backend-api.com/auth/facebook')
+      .then((response) => response.json())
+      .then((data) => {
+        if (data.success) {
+          alert('Facebook login successful!'); 
+        } else {
+          alert(`Facebook login failed: ${data.message}`); 
+        }
+      })
+      .catch((error) => {
+        console.error('Error:', error); 
+        alert('Something went wrong. Please try again.'); 
       });
-
-      const data = await response.json();
-
-      if (response.ok) {
-        alert('Facebook login successful!');
-      } else {
-        alert(`Error: ${data.message}`);
-      }
-    } catch (error) {
-      console.error('Error during Facebook login:', error);
-      alert('An error occurred. Please try again.');
-    }
   });
+  

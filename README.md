@@ -28,6 +28,7 @@
 ![Sign-up Page Screenshot](/Images/Screenshot%20(148).png)
 
 ## Verification Confirmation Page 
+![Sign-up Page Screenshot](/Images/Screenshot%20(151).png)
 
 ## Booking Screen
 ![Sign-up Page Screenshot](/Images/Screenshot%20(137).png)

@@ -25,6 +25,7 @@
 ![Sign-up Page Screenshot](/Images/Screenshot%20(147).png)
 
 ## Phone Number Verification Page
+![Sign-up Page Screenshot](/Images/Screenshot%20(148).png)
 
 ## Verification Confirmation Page 
 

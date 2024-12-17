@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/Images/Without background .png" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>User_Profile</title>
+</head>
+<body class="bg-white shadow-md font-sans">
+    <section class="bg-gray-50 min-h-screen py-8 px-4">
+        <!-- Header -->
+        <div class="flex items-center space-x-4 mb-8">
+          <button class="text-gray-600 hover:text-gray-800 focus:outline-none">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+            </svg>
+          </button>
+          <h1 class="text-2xl font-bold text-gray-900">Service Provider</h1>
+        </div>
+      
+        <!-- Provider Details -->
+        <div class="bg-white rounded-xl p-6 shadow-lg">
+          <div class="flex items-center space-x-6">
+            <!--This is the profile image-->
+            <img src="/Images/John doe.jpeg" alt="Service Provider" class="w-24 h-24 rounded-full object-cover shadow-sm">
+            <div class="flex-1">
+              <h2 class="text-2xl font-bold text-gray-900">Seun Adekunle</h2>
+              <p class="text-sm text-blue-600 font-medium">Expert Home Plumber</p>
+              <div class="flex space-x-6 mt-3 text-sm text-gray-700">
+                <div><span class="font-semibold">⭐ 4.0</span></div>
+                <div><span class="font-semibold">157</span> Jobs</div>
+                <div>Rate: <span class="font-semibold">₦4k/hr</span></div>
+              </div>
+            </div>
+            <button class="p-2 bg-gray-100 rounded-full shadow-sm hover:bg-gray-200 focus:outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#000000">
+                    <path d="m438-416 188-188.67-47-46.66-141 141-57-56.34-47 47L438-416ZM200-120v-656.67q0-27 19.83-46.83 19.84-19.83 46.84-19.83h426.66q27 0 46.84 19.83Q760-803.67 760-776.67V-120L480-240 200-120Zm66.67-101.33L480-312l213.33 90.67v-555.34H266.67v555.34Zm0-555.34h426.66-426.66Z"/>
+                </svg>
+            </button>
+          </div>
+        </div>
+      
+        <!-- Services -->
+        <div class="grid grid-cols-3 gap-6 my-8">
+          <div class="bg-white p-6 rounded-xl shadow-lg flex flex-col items-center">
+            <img src="/Images/Battery Charging.jpg" alt="Kitchen" class="w-12 h-12 mb-4">
+            <p class="text-base font-semibold text-gray-800">Battery Charging</p>
+          </div>
+          <div class="bg-white p-6 rounded-xl shadow-lg flex flex-col items-center">
+            <img src="/Images/Repairs.jpg" alt="Bathroom" class="w-12 h-12 mb-4">
+            <p class="text-base font-semibold text-gray-800">Repairs</p>
+          </div>
+          <div class="bg-white p-6 rounded-xl shadow-lg flex flex-col items-center">
+            <img src="/Images/Maintenance.jpg" alt="Toilet" class="w-12 h-12 mb-4">
+            <p class="text-base font-semibold text-gray-800">Maintenance</p>
+          </div>
+        </div>
+      
+        <!-- Description -->
+        <div class="bg-white rounded-xl p-6 shadow-lg mb-8">
+          <h3 class="text-lg font-bold text-gray-900 mb-4">Description</h3>
+          <p class="text-sm text-gray-700 leading-relaxed">
+            Whatever your plumbing issue—simple or complex—I solve it quickly while giving attention to detail. I am a professional plumber with years of experience solving household, commercial, and industrial plumbing issues. My services are pocket-friendly and reduce recalls for plumbing problems.
+          </p>
+        </div>
+      
+        <!-- Call to Action -->
+        <button class="w-full py-3 bg-blue-600 text-white rounded-xl hover:bg-blue-700 font-semibold text-lg transition shadow-md focus:outline-none mb-8">
+          Book Now
+        </button>
+      
+        <!-- Testimonials -->
+        <div class="space-y-6">
+          <div class="bg-white p-6 rounded-xl shadow-lg flex items-start space-x-6">
+            <img src="user1.jpg" alt="Layo Aderoni" class="w-16 h-16 rounded-full object-cover shadow-sm">
+            <div>
+              <p class="text-sm font-semibold text-gray-800">Layo Aderoni</p>
+              <p class="text-sm text-gray-500">Lagos</p>
+              <p class="text-sm text-gray-700 mt-2 leading-relaxed">
+                "Seun provided exceptional plumbing services. He arrived promptly and resolved the issue professionally. Highly recommended!"
+              </p>
+            </div>
+          </div>
+          <div class="bg-white p-6 rounded-xl shadow-lg flex items-start space-x-6">
+            <img src="user2.jpg" alt="Joseph Ike" class="w-16 h-16 rounded-full object-cover shadow-sm">
+            <div>
+              <p class="text-sm font-semibold text-gray-800">Joseph Ike</p>
+              <p class="text-sm text-gray-500">Benin City</p>
+              <p class="text-sm text-gray-700 mt-2 leading-relaxed">
+                "Reliable and professional! Seun's attention to detail made a big difference in solving our plumbing issues quickly."
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+</body>
+</html>

@@ -1,0 +1,151 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/Images/Without background .png" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>iService</title>
+</head>
+<body class="bg-gray-100 font-sans">
+  <div class="max-w-screen-xl mx-auto bg-white shadow-xl border rounded-lg overflow-hidden">
+    <!-- Header -->
+    <header class="flex items-center justify-between px-8 py-6 bg-gray-100 shadow">
+      <div class="flex items-center space-x-4">
+        <img src="/Images/Booking logo.jpg" alt="User" class="w-12 h-12 rounded-full shadow-lg">
+        <h1 class="text-2xl font-bold">iService</h1>
+      </div>
+      <i class="fas fa-bell text-gray-600 text-2xl hover:text-blue-500 transition-colors"></i>
+    </header>
+
+    <!-- Search Section -->
+    <section class="px-8 py-6 bg-gray-50 shadow-inner">
+      <div class="flex items-center space-x-4">
+        <input type="text" placeholder="Search for services..." 
+          class="flex-1 px-4 py-3 border rounded-lg focus:outline-none focus:ring focus:ring-blue-300">
+        <button class="bg-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-600 transition">
+          <i class="fas fa-search"></i> Search
+        </button>
+      </div>
+    </section>
+
+    <!-- Promo Banner -->
+    <section class="relative bg-blue-500 text-white px-8 py-12 lg:flex lg:items-center lg:justify-between">
+        <div class="text-center lg:text-left lg:w-1/2">
+          <p class="text-3xl font-bold">Special Offer: 30% Off on All Services</p>
+          <p class="text-lg mt-2">Use Promo Code: <strong>IJpro5</strong></p>
+          <button class="bg-white text-blue-500 px-8 py-3 mt-6 rounded-lg font-bold shadow-md hover:shadow-lg transition">
+            Book Now
+          </button>
+        </div>
+      
+        <!-- Simplified Carousel -->
+        <div class="relative mt-6 lg:mt-0 lg:w-1/3 max-w-md mx-auto">
+            <!-- Carousel -->
+            <div class="overflow-hidden rounded-lg relative">
+              <!-- Slides Container -->
+              <div class="flex animate-carousel">
+                <!-- Slide 1 -->
+                <div class="w-full shrink-0">
+                  <img src="/Images/Promo Image.jpg" alt="Promo 1" class="w-full h-40 lg:h-48 object-cover">
+                </div>
+                <!-- Slide 2 -->
+                <div class="w-full shrink-0">
+                  <img src="/Images/promo 2.jpg" alt="Promo 2" class="w-full h-40 lg:h-48 object-cover">
+                </div>
+                <!-- Slide 3 -->
+                <div class="w-full shrink-0">
+                  <img src="/Images/Construction image.jpg" alt="Promo 3" class="w-full h-40 lg:h-48 object-cover">
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <style>
+            @keyframes carousel {
+              0%, 25% { transform: translateX(0%); }
+              35%, 60% { transform: translateX(-100%); }
+              70%, 95% { transform: translateX(-200%); }
+            }
+            .animate-carousel {
+              animation: carousel 10s infinite;
+            }
+          </style>
+          
+
+      </section>
+      
+      
+
+    <!-- Categories -->
+    <section class="px-8 py-12 bg-gray-50">
+      <h2 class="text-2xl font-bold mb-6">Our Categories</h2>
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-8">
+        <div class="text-center bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition">
+          <i class="fas fa-faucet text-5xl text-blue-500"></i>
+          <p class="mt-4 text-lg font-semibold">Plumbing</p>
+        </div>
+        <div class="text-center bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition">
+          <i class="fas fa-broom text-5xl text-blue-500"></i>
+          <p class="mt-4 text-lg font-semibold">Cleaning</p>
+        </div>
+        <div class="text-center bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition">
+          <i class="fas fa-wrench text-5xl text-blue-500"></i>
+          <p class="mt-4 text-lg font-semibold">Repairs</p>
+        </div>
+        <div class="text-center bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition">
+          <i class="fas fa-plug text-5xl text-blue-500"></i>
+          <p class="mt-4 text-lg font-semibold">Electrical</p>
+        </div>
+        <div class="text-center bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition">
+          <i class="fas fa-soap text-5xl text-blue-500"></i>
+          <p class="mt-4 text-lg font-semibold">Laundry</p>
+        </div>
+        <div class="text-center bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition">
+          <i class="fas fa-list text-5xl text-blue-500"></i>
+          <p class="mt-4 text-lg font-semibold">All Services</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Order Again -->
+    <section class="px-8 py-12 bg-white">
+      <h2 class="text-2xl font-bold mb-6">Order Again</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="bg-blue-500 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition">
+          <img src="/Images/cleaning.jfif" alt="Home Cleaning" class="w-full h-40 object-cover">
+          <div class="p-6">
+            <p class="text-lg font-bold">Home Cleaning <span class="text-blue-500 text-sm">4.3</span></p>
+            <p class="text-sm text-white-600"><strong>N30,000/hr</strong> Off 30%</p>
+          </div>
+        </div>
+        <div class="bg-blue-500 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition">
+          <img src="/Images/capentry.jfif" alt="Carpentry" class="w-full h-40 object-cover">
+          <div class="p-6">
+            <p class="text-lg font-bold">Carpentry <span class="text-blue-500 text-sm">4.5</span></p>
+            <p class="text-sm text-white-600"><strong>N30,000/hr</strong> Off 30%</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-200 py-6 px-8 mt-12">
+      <div class="flex justify-between items-center text-gray-600">
+        <div class="flex items-center space-x-6">
+          <i class="fas fa-home text-2xl text-blue-500"></i>
+          <i class="fas fa-calendar text-2xl hover:text-blue-500 transition"></i>
+          <i class="fas fa-user text-2xl hover:text-blue-500 transition"></i>
+          <i class="fas fa-cog text-2xl hover:text-blue-500 transition"></i>
+          <i class="fas fa-envelope text-2xl hover:text-blue-500 transition"></i>
+        </div>
+        <p class="text-sm">© 2024 iService. All rights reserved.</p>
+      </div>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

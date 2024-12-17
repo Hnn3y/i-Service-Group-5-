@@ -13,28 +13,28 @@
     <header class="">
         <img class="w-40" src="./assets/logo.png" alt="">
     </header>
-    <form action="" class=" mt-5 flex flex-col items-center gap-2">
+    <form action="" id="login-form" class=" mt-5 flex flex-col items-center gap-2">
         <h2 class="text-3xl font-bold">Login</h2>
         <div class="form-content w-[20rem] flex flex-col gap-4 rounded-lg">
             <div class="form-data w-full flex flex-col gap-4">
                 <div class="name-input-box w-full">
                     <div class="icon-input w-full text-[#ffffff] h-10 px-2 flex items-center gap-2 border rounded-lg">
                         <i class="fa fa-envelope" aria-hidden="true"></i>
-                        <input class="w-full bg-transparent" type="text" placeholder="Email Address/Phone number">
+                        <input id="email" class="w-full bg-transparent" type="text" name="name" placeholder="Email Address/Phone number">
                     </div>
                     <label for="" class="validation hidden">Invalid name</label>
                 </div>
                 <div class="phone-input-box w-full">
                     <div class="icon-input w-full text-[#ffffff] h-10 px-2 flex items-center gap-2 border rounded-lg">
                         <i class="fa fa-lock" aria-hidden="true"></i>
-                        <input class="w-full bg-transparent" type="password" placeholder="Enter Password">
+                        <input id="password" class="w-full bg-transparent" type="password" name="password"  placeholder="Enter Password">
                     </div>
                     <label for="" class="validation hidden">Invalid Password</label>
                 </div>
                 
             </div>
             <div class="form-buttons flex flex-col items-center gap-4" >
-                <input class="w-full h-10 bg-[#fff] border rounded-lg" type="submit" value="Login">
+                <input id="submit-btn" name="submit-btn" class="w-full h-10 bg-[#fff] border rounded-lg cursor-pointer " type="submit" value="Login">
                 <a href=""  class="w-full h-10 bg-[#fff] flex justify-center items-center border rounded-lg">Login With Facebook</a>
                 <a href="" class="text-[#fff] text-sm self-start">Forgotten password?</a>
             </div>
@@ -42,7 +42,7 @@
         </div>
         <p class="text-[#1133F5]">Don't have an account yet? <a href="/i-Service-Group-5-/SIGNUP-PAGES/user-signups/index.html" class="font-bold">Sign up</a></p>
     </form>
-
+    <p id="response-message" class="bg-red-600 w-full text-[#ffffff] flex justify-center absolute top-0  isolate"></p>
     <script src="script.js"></script>
 </body>
 </html>

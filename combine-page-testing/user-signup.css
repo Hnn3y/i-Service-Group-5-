@@ -11,8 +11,7 @@
     --light-blue-clr: #117BF5;
 }
 body{
-    /* background-image: url(/i-Service-Group-5-/SIGNUP-PAGES/user-signups/assets/sign\ up\ screen\ pic.png); */
-    background-image: url(/i-Service-Group-5-/LOGIN-PAGES/user-login/assets/login\ page\ \(1\).png);
+    background-image: url(/i-Service-Group-5-/SIGNUP-PAGES/user-signups/assets/sign\ up\ screen\ pic.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -36,20 +35,10 @@ form .form-content{
     padding: 2rem 1rem;
 }
 input[type="submit"],
-.form-buttons a:not(a:last-child){
+.form-buttons a{
     color: var(--ascent-clr);
     font-weight: 700;
 }
 input::placeholder{
     color: rgba(255, 255, 255, .8);
-}
-
-.success{
-    background-color: green;
-    color: #ffffff;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-
-
 }

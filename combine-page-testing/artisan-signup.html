@@ -1,0 +1,113 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="artisan-signup.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/ee600e9388.js" crossorigin="anonymous"></script>
+    <title>Artisan Sign-up</title>
+</head>
+<body>
+    <div class="overlay"></div>
+    <header class="">
+        <img src="./images/logo.png" alt="" class="w-[7rem]">
+    </header>
+    <form action="" class=" mt-5 flex flex-col items-center gap-2">
+        <h2 class="text-3xl font-bold">Sign up</h2>
+        <div class="form-content w-[20rem] md:w-[60rem] flex flex-col gap-4 rounded-lg">
+            <div class="form-data w-full gap-4">
+                <div class="name-input-box col-span-4 w-full">
+                    <div class="icon-input w-full text-[#ffffff] h-10 px-2 flex items-center gap-2 border rounded-lg">
+                        <i class="fa fa-user" aria-hidden="true"></i>
+                        <input class="w-full bg-transparent" type="text" placeholder="Full Name">
+                    </div>
+                    <label for="" class="validation hidden">Invalid name</label>
+                </div>
+                <div class="phone-input-box w-full col-span-4 md:col-span-2">
+                    <div class="icon-input w-full text-[#ffffff] h-10 px-2 flex items-center gap-2 border rounded-lg">
+                        <i class="fa fa-phone" aria-hidden="true"></i>
+                        <input class="w-full bg-transparent" type="text" placeholder="Phone Number">
+                    </div>
+                    <label for="" class="validation hidden">Invalid Phone number</label>
+                </div>
+                <div class="email-input-box w-full col-span-4 md:col-span-2">
+                    <div class="icon-input w-full text-[#ffffff] h-10 px-2 flex items-center gap-2 border rounded-lg">
+                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                        <input class="w-full bg-transparent" type="text" placeholder="Email Address">
+                    </div>
+                    <label for="" class="validation hidden">Invalid email</label>
+                </div>
+                <div class="state-input-box w-full col-span-4 md:col-span-2 ">
+                    <div class="icon-input w-full text-[#ffffff] h-10 px-2 flex items-center gap-2 border rounded-lg">
+                        <i class="fa fa-map-marker-alt" aria-hidden="true"></i>
+                        <input class="w-full bg-transparent" type="text" placeholder="State">
+                    </div>
+                    <label for="" class="validation hidden">Invalid State</label>
+                </div>
+                <div class="lga-input-box w-full col-span-4 md:col-span-2">
+                    <div class="icon-input w-full text-[#ffffff] h-10 px-2 flex items-center gap-2 border rounded-lg">
+                        <i class="fa fa-building" aria-hidden="true"></i>
+                        <input class="w-full bg-transparent" type="text" placeholder="L.G.A">
+                    </div>
+                    <label for="" class="validation hidden">Invalid LGA</label>
+                </div>
+                <div class="address-input-box w-full col-span-4">
+                    <div class="icon-input w-full text-[#ffffff] h-10 px-2 flex items-center gap-2 border rounded-lg">
+                        <i class="fa-solid fa-home"></i>
+                        <input class="w-full bg-transparent" type="text" placeholder="Address">
+                    </div>
+                    <label for="" class="validation hidden">Invalid address</label>
+                </div>
+                <div class="service-input-box w-full col-span-4 md:col-span-2">
+                    <div class="icon-input w-full text-[#ffffff] h-10 px-2 flex items-center gap-2 border rounded-lg">
+                        <i class="fa fa-briefcase" aria-hidden="true"></i>
+                        <input class="w-full bg-transparent" type="text" placeholder="Service">
+                    </div>
+                    <label for="" class="validation hidden">Invalid Service</label>
+                </div>
+                <div class="works-input-box w-full col-span-4 md:col-span-2">
+                    <div class="icon-input w-full text-[#ffffff] h-10 px-2 flex items-center gap-2 border rounded-lg">
+                        <i class="fa fa-pencil-alt" aria-hidden="true"></i>
+                        <input class="w-full bg-transparent rounded-lg" type="file" placeholder="Pictures(proof of work) Optional">
+                    </div>
+                    <label for="" class="validation hidden">Invalid works</label>
+                </div>
+                <div class="description-input-box w-full col-span-4">
+                    <div class="icon-input w-full text-[#ffffff] h-10 px-2 flex items-center gap-2 border rounded-lg">
+                        <i class="fa fa-image" aria-hidden="true"></i>
+                        <input class="w-full bg-transparent" type="text" placeholder="Description">
+                    </div>
+                    <label for="" class="validation hidden">Invalid Description</label>
+                </div>
+                
+                <div class="password-input-box w-full col-span-4 md:col-span-2">
+                    <div class="icon-input w-full text-[#ffffff] h-10 px-2 flex items-center gap-2 border rounded-lg">
+                        <i class="fa fa-lock" aria-hidden="true"></i>
+                        <input class="w-full bg-transparent" type="text" placeholder="Enter Password">
+                    </div>
+                    <label for="" class="validation hidden">Invalid Password</label>
+                </div>
+                <div class="re-password-input-box w-full col-span-4 md:col-span-2 ">
+                    <div class="icon-input w-full text-[#ffffff] h-10 px-2 flex items-center gap-2 border rounded-lg">
+                        <i class="fa fa-lock" aria-hidden="true"></i>
+                        <input class="w-full bg-transparent" type="text" placeholder="Enter Password">
+                    </div>
+                    <label for="" class="validation hidden">Invalid Password</label>
+                </div>
+            </div>
+            <div class="form-buttons flex flex-col items-center gap-4" >
+                <input class="w-full h-10 bg-[#fff] border rounded-lg" type="submit" value="Sign up">
+                <!-- <a href=""  class="w-full h-10 bg-[#fff] flex justify-center items-center border rounded-lg">Sign Up With Facebook</a> -->
+            </div>
+
+        </div>
+        <p class="text-[#1133F5]">Already have an account? <a href="./login.html" class="font-bold">Login</a></p>
+    </form>
+
+    <script src="artisan-signup.js"></script>
+</body>
+</html>

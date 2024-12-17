@@ -20,25 +20,22 @@ document.addEventListener('DOMContentLoaded', () => {
       { input: rePasswordInput, validation: rePasswordValidation, check: () => validatePasswordMatch(passwordInput, rePasswordInput) },
     ];
   
-    // Real-time validation
     validationMap.forEach(({ input, validation, check }) => {
       input.addEventListener('input', () => handleValidation(input, validation, check));
     });
   
-    // On form submission
     signupForm.addEventListener('submit', (event) => {
-      event.preventDefault(); // Prevent default form submission
+      event.preventDefault(); 
   
       let isValid = true;
   
-      // Validate all inputs
       validationMap.forEach(({ input, validation, check }) => {
         const valid = handleValidation(input, validation, check);
         if (!valid) isValid = false;
       });
   
       if (isValid) {
-        // Submit form
+
         const formData = {
           name: nameInput.value,
           phone: phoneInput.value,
@@ -47,33 +44,32 @@ document.addEventListener('DOMContentLoaded', () => {
         };
   
         console.log('Form submitted:', formData);
-        // Replace the URL with your API endpoint
         submitForm(formData);
       }
     });
   
     // Validation functions
     function validateName(name) {
-      return name.trim().length >= 3; // Name must have at least 3 characters
+      return name.trim().length >= 3; 
     }
   
     function validatePhone(phone) {
-      return /^[0-9]{10}$/.test(phone); // Matches a 10-digit number
+      return /^[0-9]{10}$/.test(phone);
     }
   
     function validateEmail(email) {
-      return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email); // Basic email regex
+      return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
     }
   
     function validatePassword(password) {
-      return password.trim().length >= 6; // Password must have at least 6 characters
+      return password.trim().length >= 6;
     }
   
     function validatePasswordMatch(password, rePassword) {
-      return password.value === rePassword.value; // Passwords must match
+      return password.value === rePassword.value;
     }
   
-    // Utility function for validation handling
+
     function handleValidation(input, validationLabel, validationCheck) {
       if (validationCheck(input.value)) {
         validationLabel.classList.add('hidden');
@@ -86,7 +82,6 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
   
-    // Submit the form to the server
     async function submitForm(formData) {
       try {
         const response = await fetch('https://example.com/api/signup', {
@@ -100,7 +95,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (response.ok) {
           const data = await response.json();
           alert(`Signup successful! Welcome, ${data.user}.`);
-          signupForm.reset(); // Clear the form on success
+          signupForm.reset();
         } else {
           const error = await response.json();
           alert(`Signup failed: ${error.message}`);

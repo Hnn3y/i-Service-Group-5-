@@ -26,7 +26,7 @@
     </div>
 
     <!-- Form Fields -->
-    <form class="bg-blue-700 p-6 rounded-lg">
+    <form id="loginForm" class="bg-blue-700 p-6 rounded-lg">
       <!-- Email Input -->
       <div class="mb-4">
         <label for="email" class="sr-only">Email Address/Phone Number</label>
@@ -56,7 +56,7 @@
 
       <!-- Login Button -->
       <div class="mb-4 flex justify-center">
-        <button type="button" class="w-3/4 bg-white text-blue-500 py-2 px-4 rounded-md hover:bg-blue-600 hover:text-white transition duration-300">
+        <button type="submit" class="w-3/4 bg-white text-blue-500 py-2 px-4 rounded-md hover:bg-blue-600 hover:text-white transition duration-300">
           Login
         </button>
       </div>
@@ -75,7 +75,7 @@
       <p class="text-sm text-black">Don’t have an account yet? <a href="./user-signup.html" class="text-blue-500 font-medium hover:underline">Sign Up</a></p>
     </div>
   </div>
-
+  <p id="response-message" class="bg-red-600 w-full text-[#ffffff] flex justify-center absolute top-0  isolate"></p>
 
   <script src="login.js"></script>
 </body>

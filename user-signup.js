@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   
     function validatePhone(phone) {
-      return /^[0-9]{10}$/.test(phone);
+      return /^[0-9]{11}$/.test(phone);
     }
   
     function validateEmail(email) {

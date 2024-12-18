@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/Images/Without background .png" type="image/x-icon">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <title>Verification</title>
+</head>
+<body class="relative h-screen w-full bg-cover bg-center" style="background-image: url('/Images/login page (1).png');">
+
+    <!-- Background Overlay -->
+    <div class="absolute inset-0 bg-white opacity-10"></div>
+
+    <!-- Main Container -->
+    <div class="relative w-full max-w-lg mx-auto p-6  rounded-lg shadow-lg mt-16">
+        <div class="text-center mb-6">
+            <img src="./images/logo.png" alt="Logo" class="w-20 mx-auto mb-4">
+            <h1 class="text-2xl font-bold text-blue-700">Verification</h1>
+            <p class="text-black-600 mt-2">Enter the 6-digit code sent to +234***7772</p>
+        </div>
+
+        <!-- OTP Input Fields -->
+        <div class="flex justify-center space-x-3 my-6">
+            <input type="text" maxlength="1" class="otp-input w-12 h-12 text-center border-2 border-blue-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600">
+            <input type="text" maxlength="1" class="otp-input w-12 h-12 text-center border-2 border-blue-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600">
+            <input type="text" maxlength="1" class="otp-input w-12 h-12 text-center border-2 border-blue-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600">
+            <input type="text" maxlength="1" class="otp-input w-12 h-12 text-center border-2 border-blue-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600">
+            <input type="text" maxlength="1" class="otp-input w-12 h-12 text-center border-2 border-blue-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600">
+            <input type="text" maxlength="1" class="otp-input w-12 h-12 text-center border-2 border-blue-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600">
+        </div>
+
+        <!-- Resend Code Section -->
+        <div class="text-center mb-4">
+            <p class="text-sm  font-semibold">
+                Didn't get the code? <span id="resend-timer" class="text-red-600">(01:00)</span>
+            </p>
+            <button id="resend-btn" class="mt-2 bg-gray-400 text-white py-1 px-4 rounded-md cursor-not-allowed transition duration-300" disabled>
+                Resend
+            </button>
+        </div>
+
+        <!-- Verify Button -->
+        <div class="text-center">
+            <button id="verify-btn" class="bg-blue-700 hover:bg-blue-800 text-white py-2 px-6 rounded-lg transition duration-300">
+                Verify
+            </button>
+        </div>
+    </div>
+
+    <script src="verification.js"></script>
+</body>
+</html>

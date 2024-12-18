@@ -39,6 +39,26 @@ input[type="submit"],
     color: var(--ascent-clr);
     font-weight: 700;
 }
-input::placeholder{
+/* input::placeholder{
     color: rgba(255, 255, 255, .8);
+} */
+
+input::placeholder {
+    color: rgba(255, 255, 255, 0.8); /* Modern browsers */
+}
+
+input::-webkit-input-placeholder {
+    color: rgba(255, 255, 255, 0.8); /* Chrome, Safari, Edge */
+}
+
+input:-moz-placeholder {
+    color: rgba(255, 255, 255, 0.8); /* Firefox 18- */
+}
+
+input::-moz-placeholder {
+    color: rgba(255, 255, 255, 0.8); /* Firefox 19+ */
+}
+
+input:-ms-input-placeholder {
+    color: rgba(255, 255, 255, 0.8); /* Internet Explorer */
 }

@@ -1,106 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>i-Service Sign Up</title>
-  <link rel="icon" href="/Images/Without background .png" type="image/x-icon">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="user-signup.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/ee600e9388.js" crossorigin="anonymous"></script>
+    <title>User Sign-up</title>
 </head>
-<body class="bg-blue-50 relative min-h-screen">
+<body>
+    <div class="overlay"></div>
+    <header class="">
+        <img class="w-40" src="./images/logo.png" alt="">
+    </header>
+    <form action="" class=" mt-5 flex flex-col items-center gap-2">
+        <h2 class="text-3xl font-bold">Sign up</h2>
+        <div class="form-content w-[20rem] md:w-[32rem] flex flex-col gap-4 rounded-lg">
+            <div class="form-data w-full flex flex-col gap-4">
+                <div class="name-input-box w-full">
+                    <div class="icon-input w-full text-[#ffffff] h-10 px-2 flex items-center gap-2 border rounded-lg">
+                        <i class="fa fa-user" aria-hidden="true"></i>
+                        <input class="w-full bg-transparent" type="text" placeholder="Full Name">
+                    </div>
+                    <label for="" class="text-red-600 validation hidden">Invalid name</label>
+                </div>
+                <div class="phone-input-box w-full">
+                    <div class="icon-input w-full text-[#ffffff] h-10 px-2 flex items-center gap-2 border rounded-lg">
+                        <i class="fa fa-phone" aria-hidden="true"></i>
+                        <input class="w-full bg-transparent" type="text" placeholder="Phone Number">
+                    </div>
+                    <label for="" class="text-red-600 validation hidden">Invalid Phone number</label>
+                </div>
+                <div class="email-input-box w-full">
+                    <div class="icon-input w-full text-[#ffffff] h-10 px-2 flex items-center gap-2 border rounded-lg">
+                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                        <input class="w-full text-red-600 bg-transparent" type="text" placeholder="Email Address">
+                    </div>
+                    <label for="" class="text-red-600 validation hidden">Invalid email</label>
+                </div>
+                <div class="password-input-box w-full">
+                    <div class="icon-input w-full text-[#ffffff] h-10 px-2 flex items-center gap-2 border rounded-lg">
+                        <i class="fa fa-lock" aria-hidden="true"></i>
+                        <input class="w-full bg-transparent" type="text" placeholder="Enter Password">
+                    </div>
+                    <label for="" class="text-red-600 validation hidden">Invalid Password</label>
+                </div>
+                <div class="re-password-input-box w-full">
+                    <div class="icon-input w-full text-[#ffffff] h-10 px-2 flex items-center gap-2 border rounded-lg">
+                        <i class="fa fa-lock" aria-hidden="true"></i>
+                        <input class="w-full bg-transparent" type="text" placeholder="Enter Password">
+                    </div>
+                    <label for="" class="text-red-600 validation hidden">Password do not match</label>
+                </div>
+            </div>
+            <div class="form-buttons flex flex-col items-center gap-4" >
+                <input class="w-full h-10 bg-[#fff] border rounded-lg cursor-pointer" type="submit" value="Sign up">
+                <a href=""  class="w-full h-10 bg-[#fff] flex justify-center items-center border rounded-lg">Sign Up With Facebook</a>
+            </div>
 
-  <!-- Background Image with Fade -->
-  <div class="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-50" style="background-image: url('/Images/login\ page\ \(1\).png');"></div>
+        </div>
+        <p class="text-[#1133F5] -mt-2">Already have an account? <a href="./login.html" class="font-bold">Login</a></p>
+    </form>
 
-  <div class="flex justify-center items-center min-h-screen z-10 relative">
-    <div class="bg-white rounded-lg shadow-lg w-full max-w-md p-6">
-      <div class="flex justify-center mb-6">
-        <!-- Image Logo -->
-        <img src="/Images/Without background .png" alt="Logo" class="h-16 w-auto">
-      </div>
-      <h1 class="text-2xl font-bold text-center text-gray-700 mb-4">Sign Up</h1>
-    
-      <form class="bg-blue-600 rounded-lg p-6 space-y-4">
-        <!-- Full Name -->
-        <div class="mb-4">
-          <label class="block text-white font-semibold mb-2">Full Name</label>
-          <div class="relative">
-            <i class="fas fa-user absolute left-3 top-1/2 transform -translate-y-1/2 text-white"></i>
-            <input type="text" 
-                   placeholder="Enter your full name" 
-                   class="w-full bg-blue-500 text-white pl-10 py-2 border border-blue-400 rounded focus:bg-white focus:text-blue-600 focus:ring-2 focus:ring-blue-300">
-          </div>
-        </div>
-      
-        <!-- Phone Number -->
-        <div class="mb-4">
-          <label class="block text-white font-semibold mb-2">Phone Number</label>
-          <div class="relative">
-            <i class="fas fa-phone absolute left-3 top-1/2 transform -translate-y-1/2 text-white"></i>
-            <input type="tel" 
-                   placeholder="Enter your phone number" 
-                   class="w-full bg-blue-500 text-white pl-10 py-2 border border-blue-400 rounded focus:bg-white focus:text-blue-600 focus:ring-2 focus:ring-blue-300">
-          </div>
-        </div>
-      
-        <!-- Email Address -->
-        <div class="mb-4">
-          <label class="block text-white font-semibold mb-2">Email Address</label>
-          <div class="relative">
-            <i class="fas fa-envelope absolute left-3 top-1/2 transform -translate-y-1/2 text-white"></i>
-            <input type="email" 
-                   placeholder="Enter your email address" 
-                   class="w-full bg-blue-500 text-white pl-10 py-2 border border-blue-400 rounded focus:bg-white focus:text-blue-600 focus:ring-2 focus:ring-blue-300">
-          </div>
-        </div>
-      
-        <!-- Password -->
-        <div class="mb-4">
-          <label class="block text-white font-semibold mb-2">Password</label>
-          <div class="relative">
-            <i class="fas fa-lock absolute left-3 top-1/2 transform -translate-y-1/2 text-white"></i>
-            <input type="password" 
-                   placeholder="Enter your password" 
-                   class="w-full bg-blue-500 text-white pl-10 py-2 border border-blue-400 rounded focus:bg-white focus:text-blue-600 focus:ring-2 focus:ring-blue-300">
-          </div>
-        </div>
-      
-        <!-- Confirm Password -->
-        <div class="mb-6">
-          <label class="block text-white font-semibold mb-2">Confirm Password</label>
-          <div class="relative">
-            <i class="fas fa-lock absolute left-3 top-1/2 transform -translate-y-1/2 text-white"></i>
-            <input type="password" 
-                   placeholder="Confirm your password" 
-                   class="w-full bg-blue-500 text-white pl-10 py-2 border border-blue-400 rounded focus:bg-white focus:text-blue-600 focus:ring-2 focus:ring-blue-300">
-          </div>
-        </div>
-
-        <!-- Submit Button -->
-        <div class="flex justify-center mt-4">
-          <button type="submit" class="w-full sm:w-48 bg-white text-blue-600 py-2 rounded-lg shadow-md hover:bg-gray-100 transition duration-300 ease-in-out transform hover:scale-105">
-            Sign Up
-          </button>
-        </div>
-
-        <!-- Sign Up With Facebook -->
-        <div class="flex justify-center mt-4">
-          <button class="w-full sm:w-48 bg-white text-blue-600 py-2 px-4 rounded-lg shadow-md flex items-center justify-center gap-3 hover:bg-gray-100 transition duration-300 ease-in-out transform hover:scale-105">
-            <i class="fab fa-facebook text-xl"></i>
-            <span class="text-black text-sm">Sign Up With Facebook</span>
-          </button>
-        </div>
-      </form>        
-    
-      <div class="text-center mt-6">
-        <p class="text-blue-800">
-          Already have an account? <a href="#" class="text-blue-700 font-semibold">Login</a>
-        </p>
-      </div>
-    </div>
-  </div>
-
+    <script src="user-signup.js"></script>
 </body>
 </html>

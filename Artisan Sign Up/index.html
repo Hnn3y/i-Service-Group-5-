@@ -1,149 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Favicon -->
-  <link rel="icon" href="/path-to-your-favicon/favicon.ico" type="image/x-icon">
-  
-  <!-- Tailwind CSS -->
-  <script src="https://cdn.tailwindcss.com"></script>
-
-  <!-- Font Awesome CDN -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <title>Sign Up</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="artisan-signup.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/ee600e9388.js" crossorigin="anonymous"></script>
+    <title>Artisan Sign-up</title>
 </head>
-<body class="bg-gray-100 flex items-center justify-center min-h-screen">
-  <!-- Parent Container -->
-  <div class="w-full max-w-md">
-    <!-- Header Section -->
-    <div class="text-center mb-6">
-      <!-- Logo Image -->
-      <img src="/Images/Without background.png" alt="Logo" class="mx-auto w-16 h-16 mb-4">
-      <h2 class="text-gray-800 text-2xl font-semibold">Sign Up</h2>
-    </div>
+<body>
+    <div class="overlay"></div>
+    <header class="">
+        <img src="./images/logo.png" alt="" class="w-[7rem]">
+    </header>
+    <form action="" class=" mt-5 flex flex-col items-center gap-2">
+        <h2 class="text-3xl font-bold">Sign up</h2>
+        <div class="form-content w-[20rem] md:w-[60rem] flex flex-col gap-4 rounded-lg">
+            <div class="form-data w-full gap-4">
+                <div class="name-input-box col-span-4 w-full">
+                    <div class="icon-input w-full text-[#ffffff] h-10 px-2 flex items-center gap-2 border rounded-lg">
+                        <i class="fa fa-user" aria-hidden="true"></i>
+                        <input class="w-full bg-transparent" type="text" placeholder="Full Name">
+                    </div>
+                    <label for="" class="validation hidden">Invalid name</label>
+                </div>
+                <div class="phone-input-box w-full col-span-4 md:col-span-2">
+                    <div class="icon-input w-full text-[#ffffff] h-10 px-2 flex items-center gap-2 border rounded-lg">
+                        <i class="fa fa-phone" aria-hidden="true"></i>
+                        <input class="w-full bg-transparent" type="text" placeholder="Phone Number">
+                    </div>
+                    <label for="" class="validation hidden">Invalid Phone number</label>
+                </div>
+                <div class="email-input-box w-full col-span-4 md:col-span-2">
+                    <div class="icon-input w-full text-[#ffffff] h-10 px-2 flex items-center gap-2 border rounded-lg">
+                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                        <input class="w-full bg-transparent" type="text" placeholder="Email Address">
+                    </div>
+                    <label for="" class="validation hidden">Invalid email</label>
+                </div>
+                <div class="state-input-box w-full col-span-4 md:col-span-2 ">
+                    <div class="icon-input w-full text-[#ffffff] h-10 px-2 flex items-center gap-2 border rounded-lg">
+                        <i class="fa fa-map-marker-alt" aria-hidden="true"></i>
+                        <input class="w-full bg-transparent" type="text" placeholder="State">
+                    </div>
+                    <label for="" class="validation hidden">Invalid State</label>
+                </div>
+                <div class="lga-input-box w-full col-span-4 md:col-span-2">
+                    <div class="icon-input w-full text-[#ffffff] h-10 px-2 flex items-center gap-2 border rounded-lg">
+                        <i class="fa fa-building" aria-hidden="true"></i>
+                        <input class="w-full bg-transparent" type="text" placeholder="L.G.A">
+                    </div>
+                    <label for="" class="validation hidden">Invalid LGA</label>
+                </div>
+                <div class="address-input-box w-full col-span-4">
+                    <div class="icon-input w-full text-[#ffffff] h-10 px-2 flex items-center gap-2 border rounded-lg">
+                        <i class="fa-solid fa-home"></i>
+                        <input class="w-full bg-transparent" type="text" placeholder="Address">
+                    </div>
+                    <label for="" class="validation hidden">Invalid address</label>
+                </div>
+                <div class="service-input-box w-full col-span-4 md:col-span-2">
+                    <div class="icon-input w-full text-[#ffffff] h-10 px-2 flex items-center gap-2 border rounded-lg">
+                        <i class="fa fa-briefcase" aria-hidden="true"></i>
+                        <input class="w-full bg-transparent" type="text" placeholder="Service">
+                    </div>
+                    <label for="" class="validation hidden">Invalid Service</label>
+                </div>
+                <div class="works-input-box w-full col-span-4 md:col-span-2">
+                    <div class="icon-input w-full text-[#ffffff] h-10 px-2 flex items-center gap-2 border rounded-lg">
+                        <i class="fa fa-pencil-alt" aria-hidden="true"></i>
+                        <input class="w-full bg-transparent rounded-lg" type="file" placeholder="Pictures(proof of work) Optional">
+                    </div>
+                    <label for="" class="validation hidden">Invalid works</label>
+                </div>
+                <div class="description-input-box w-full col-span-4">
+                    <div class="icon-input w-full text-[#ffffff] h-10 px-2 flex items-center gap-2 border rounded-lg">
+                        <i class="fa fa-image" aria-hidden="true"></i>
+                        <input class="w-full bg-transparent" type="text" placeholder="Description">
+                    </div>
+                    <label for="" class="validation hidden">Invalid Description</label>
+                </div>
+                
+                <div class="password-input-box w-full col-span-4 md:col-span-2">
+                    <div class="icon-input w-full text-[#ffffff] h-10 px-2 flex items-center gap-2 border rounded-lg">
+                        <i class="fa fa-lock" aria-hidden="true"></i>
+                        <input class="w-full bg-transparent" type="text" placeholder="Enter Password">
+                    </div>
+                    <label for="" class="validation hidden">Invalid Password</label>
+                </div>
+                <div class="re-password-input-box w-full col-span-4 md:col-span-2 ">
+                    <div class="icon-input w-full text-[#ffffff] h-10 px-2 flex items-center gap-2 border rounded-lg">
+                        <i class="fa fa-lock" aria-hidden="true"></i>
+                        <input class="w-full bg-transparent" type="text" placeholder="Enter Password">
+                    </div>
+                    <label for="" class="validation hidden">Invalid Password</label>
+                </div>
+            </div>
+            <div class="form-buttons flex flex-col items-center gap-4" >
+                <input class="w-full h-10 bg-[#fff] border rounded-lg" type="submit" value="Sign up">
+                <!-- <a href=""  class="w-full h-10 bg-[#fff] flex justify-center items-center border rounded-lg">Sign Up With Facebook</a> -->
+            </div>
 
-    <!-- Form Section -->
-    <div class="bg-blue-500 p-8 rounded-lg shadow-lg">
-      <form action="#" method="POST" class="space-y-4">
-        <!-- Full Name -->
-        <div class="relative">
-          <label for="full-name" class="text-white block mb-2">Full Name</label>
-          <div class="flex items-center">
-            <i class="fas fa-user absolute left-3 top-1/2 transform -translate-y-1/2 text-white"></i>
-            <input id="full-name" type="text" placeholder="Full Name"
-              class="w-full pl-10 pr-4 py-2 rounded-lg bg-blue-600 border border-white text-white placeholder-gray-200 focus:ring-2 focus:ring-blue-300 outline-none">
-          </div>
         </div>
+        <p class="text-[#1133F5]">Already have an account? <a href="./login.html" class="font-bold">Login</a></p>
+    </form>
 
-        <!-- Phone Number -->
-        <div class="relative">
-          <label for="phone" class="text-white block mb-2">Phone Number</label>
-          <div class="flex items-center">
-            <i class="fas fa-phone-alt absolute left-3 top-1/2 transform -translate-y-1/2 text-white"></i>
-            <input id="phone" type="tel" placeholder="Phone Number"
-              class="w-full pl-10 pr-4 py-2 rounded-lg bg-blue-600 border border-white text-white placeholder-gray-200 focus:ring-2 focus:ring-blue-300 outline-none">
-          </div>
-        </div>
-
-        <!-- Email Address -->
-        <div class="relative">
-          <label for="email" class="text-white block mb-2">Email Address</label>
-          <div class="flex items-center">
-            <i class="fas fa-envelope absolute left-3 top-1/2 transform -translate-y-1/2 text-white"></i>
-            <input id="email" type="email" placeholder="Email Address"
-              class="w-full pl-10 pr-4 py-2 rounded-lg bg-blue-600 border border-white text-white placeholder-gray-200 focus:ring-2 focus:ring-blue-300 outline-none">
-          </div>
-        </div>
-
-        <!-- State -->
-        <div class="relative">
-          <label for="state" class="text-white block mb-2">State</label>
-          <div class="flex items-center">
-            <i class="fas fa-map-marker-alt absolute left-3 top-1/2 transform -translate-y-1/2 text-white"></i>
-            <input id="state" type="text" placeholder="State"
-              class="w-full pl-10 pr-4 py-2 rounded-lg bg-blue-600 border border-white text-white placeholder-gray-200 focus:ring-2 focus:ring-blue-300 outline-none">
-          </div>
-        </div>
-
-        <!-- L.G.A -->
-        <div class="relative">
-          <label for="lga" class="text-white block mb-2">L.G.A</label>
-          <div class="flex items-center">
-            <i class="fas fa-building absolute left-3 top-1/2 transform -translate-y-1/2 text-white"></i>
-            <input id="lga" type="text" placeholder="L.G.A"
-              class="w-full pl-10 pr-4 py-2 rounded-lg bg-blue-600 border border-white text-white placeholder-gray-200 focus:ring-2 focus:ring-blue-300 outline-none">
-          </div>
-        </div>
-
-        <!-- Address -->
-        <div class="relative">
-          <label for="address" class="text-white block mb-2">Address</label>
-          <div class="flex items-center">
-            <i class="fas fa-home absolute left-3 top-1/2 transform -translate-y-1/2 text-white"></i>
-            <input id="address" type="text" placeholder="Address"
-              class="w-full pl-10 pr-4 py-2 rounded-lg bg-blue-600 border border-white text-white placeholder-gray-200 focus:ring-2 focus:ring-blue-300 outline-none">
-          </div>
-        </div>
-
-        <!-- Service -->
-        <div class="relative">
-          <label for="service" class="text-white block mb-2">Service</label>
-          <div class="flex items-center">
-            <i class="fas fa-briefcase absolute left-3 top-1/2 transform -translate-y-1/2 text-white"></i>
-            <input id="service" type="text" placeholder="Service"
-              class="w-full pl-10 pr-4 py-2 rounded-lg bg-blue-600 border border-white text-white placeholder-gray-200 focus:ring-2 focus:ring-blue-300 outline-none">
-          </div>
-        </div>
-
-        <!-- Description -->
-        <div class="relative">
-          <label for="description" class="text-white block mb-2">Description</label>
-          <div class="flex items-start">
-            <!-- Fixing the icon in textarea -->
-            <i class="fas fa-pencil-alt absolute left-3 top-3 text-white"></i>
-            <textarea id="description" placeholder="Description"
-              class="w-full pl-10 pr-4 py-2 rounded-lg bg-blue-600 border border-white text-white placeholder-gray-200 focus:ring-2 focus:ring-blue-300 outline-none h-24"></textarea>
-          </div>
-        </div>
-
-        <!-- Pictures -->
-        <div class="relative">
-          <label for="pictures" class="text-white block mb-2">Pictures (proof of work) <span class="text-sm text-gray-200">(Optional)</span></label>
-          <div class="flex items-center">
-            <i class="fas fa-image absolute left-3 top-1/2 transform -translate-y-1/2 text-white"></i>
-            <input id="pictures" type="file" accept="image/*"
-              class="w-full pl-10 pr-4 py-2 rounded-lg bg-blue-600 border border-white text-white placeholder-gray-200 focus:ring-2 focus:ring-blue-300 outline-none">
-          </div>
-        </div>
-
-        <!-- Password -->
-        <div class="relative">
-          <label for="password" class="text-white block mb-2">Enter Password</label>
-          <div class="flex items-center">
-            <i class="fas fa-lock absolute left-3 top-1/2 transform -translate-y-1/2 text-white"></i>
-            <input id="password" type="password" placeholder="Enter Password"
-              class="w-full pl-10 pr-4 py-2 rounded-lg bg-blue-600 border border-white text-white placeholder-gray-200 focus:ring-2 focus:ring-blue-300 outline-none">
-          </div>
-        </div>
-
-        <!-- Confirm Password -->
-        <div class="relative">
-          <label for="confirm-password" class="text-white block mb-2">Confirm Password</label>
-          <div class="flex items-center">
-            <i class="fas fa-lock absolute left-3 top-1/2 transform -translate-y-1/2 text-white"></i>
-            <input id="confirm-password" type="password" placeholder="Confirm Password"
-              class="w-full pl-10 pr-4 py-2 rounded-lg bg-blue-600 border border-white text-white placeholder-gray-200 focus:ring-2 focus:ring-blue-300 outline-none">
-          </div>
-        </div>
-
-        <!-- Submit Button -->
-        <button type="submit"
-          class="w-full bg-white text-blue-500 font-semibold py-2 rounded-lg hover:bg-gray-100 transition">
-          Sign Up
-        </button>
-      </form>
-    </div>
-  </div>
+    <script src="artisan-signup.js"></script>
 </body>
 </html>

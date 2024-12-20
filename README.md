@@ -47,5 +47,6 @@
 ![Sign-up Page Screenshot](/Images/Screenshot%20(146).png)
 
 
-More details about the project can be found in [Github](https://github.com/Hnn3y).
-Also check [Suruaino](https://github.com/suruaino).
+## More details about the project can be found in [Github](https://github.com/Hnn3y).
+
+## Also check [Suruaino](https://github.com/suruaino).

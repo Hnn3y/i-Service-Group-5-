@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/Images/Without background .png" type="image/x-icon">
+    <title>Booking</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="font-sans w-full h-screen">
+    <!-- Container -->
+    <div class="w-full h-screen overflow-auto">
+        <!-- Header -->
+        <div class="flex justify-between items-center px-4 py-3">
+            <i class="fas fa-arrow-left" onclick="goBack()"></i>
+            <h1 class="text-lg font-bold">Booking</h1>
+            <div></div>
+        </div>
+
+        <!-- Profile -->
+        <div class="p-4">
+            <div class="flex items-center">
+                <img src="https://via.placeholder.com/80" alt="Profile" class="w-20 h-20 border">
+                <div class="ml-4">
+                    <h2 class="text-xl font-bold">John Micheal</h2>
+                    <p class="text-blue-500">Expert Home Plumber</p>
+                    <div class="flex items-center mt-2 text-sm text-gray-500">
+                        <span><i class="fas fa-star text-yellow-400"></i> 4.3</span>
+                        <span class="ml-4">Total Jobs: 213</span>
+                        <span class="ml-4">Rate: 5k/hr</span>
+                    </div>
+                </div>
+                <button onclick="toggleFavorite(this)" class="ml-auto">
+                    <i class="fas fa-bookmark text-blue-500"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Service Categories -->
+        <div class="grid grid-cols-3 gap-4 px-4 py-3">
+            <button class="text-center category-btn rounded-xl" onclick="selectCategory(this, 'Kitchen')">
+                <i class="fas fa-tools text-2xl text-blue-600"></i>
+                <p class="text-sm mt-2">Kitchen</p>
+            </button>
+            <button class="text-center category-btn rounded-xl" onclick="selectCategory(this, 'Bathroom')">
+                <i class="fas fa-bath text-2xl text-blue-600"></i>
+                <p class="text-sm mt-2">Bathroom</p>
+            </button>
+            <button class="text-center category-btn rounded-xl" onclick="selectCategory(this, 'Toilet')">
+                <i class="fas fa-toilet text-2xl text-blue-600"></i>
+                <p class="text-sm mt-2">Toilet</p>
+            </button>
+        </div>
+
+        <!-- Service Type -->
+        <div class="px-4 py-3">
+            <div class="flex justify-around">
+                <button class="text-blue-500 px-4 py-2 rounded-lg service-btn" onclick="handleButtonClick(this, 'General Service')">General Service</button>
+                <button class="text-gray-500 px-4 py-2 rounded-lg service-btn" onclick="handleButtonClick(this, 'Kitchen Service')">Kitchen Service</button>
+            </div>
+        </div>
+
+        <!-- Date Selection -->
+        <div class="px-4 py-3">
+            <h3 class="text-lg font-bold">Select Date</h3>
+            <div id="date-container" class="flex flex-wrap justify-between mt-2 gap-2"></div>
+        </div>
+
+        <!-- Time Selection -->
+        <div class="px-4 py-3">
+            <h3 class="text-lg font-bold">Select Time</h3>
+            <div class="flex flex-wrap justify-between mt-2 gap-2">
+                <button class="bg-gray-200 px-4 py-2 rounded-lg time-btn" onclick="selectTime(this, '8:00 AM')">8:00 AM</button>
+                <button class="bg-gray-200 px-4 py-2 rounded-lg time-btn" onclick="selectTime(this, '9:00 AM')">9:00 AM</button>
+                <button class="bg-gray-200 px-4 py-2 rounded-lg time-btn" onclick="selectTime(this, '10:00 AM')">10:00 AM</button>
+                <button class="bg-gray-200 px-4 py-2 rounded-lg time-btn" onclick="selectTime(this, '12:00 PM')">12:00 PM</button>
+                <button class="bg-gray-200 px-4 py-2 rounded-lg time-btn" onclick="selectTime(this, '1:00 PM')">1:00 PM</button>
+                <button class="bg-gray-200 px-4 py-2 rounded-lg time-btn" onclick="selectTime(this, '2:00 PM')">2:00 PM</button>
+                <button class="bg-gray-200 px-4 py-2 rounded-lg time-btn" onclick="selectTime(this, '3:00 PM')">3:00 PM</button>
+                <button class="bg-gray-200 px-4 py-2 rounded-lg time-btn" onclick="selectTime(this, '4:00 PM')">4:00 PM</button>
+                <button class="bg-gray-200 px-4 py-2 rounded-lg time-btn" onclick="selectTime(this, '5:00 PM')">5:00 PM</button>
+            </div>
+        </div>
+
+        <!-- Confirmation -->
+        <div class="px-4 py-4 flex items-center mt-4">
+            <input id="mobile-number" type="text" placeholder="Enter Mobile Number" class="flex-grow border px-4 py-2 rounded-lg">
+            <button class="ml-4 bg-blue-500 text-white px-6 py-2 rounded-lg" onclick="confirmBooking()">Confirm</button>
+        </div>
+    </div>
+
+    <script>
+        let selectedDate = '';
+        let selectedTime = '';
+        let selectedService = '';
+        let selectedCategory = '';
+
+        // Navigate back
+        function goBack() {
+            window.history.back();
+        }
+
+        // Function to toggle favorite
+        function toggleFavorite(button) {
+            const icon = button.querySelector('i');
+
+            // Toggle favorite status
+            if (icon.classList.contains('text-blue-500')) {
+                icon.classList.remove('text-blue-500');
+                icon.classList.add('text-gray-500');
+                console.log('Removed from favorites');
+            } else {
+                icon.classList.remove('text-gray-500');
+                icon.classList.add('text-blue-500');
+                console.log('Added to favorites');
+            }
+
+            // You can also send this change to the backend
+            // Example:
+            const isFavorite = icon.classList.contains('text-blue-500');
+            const workerId = '123'; // Replace with the actual worker ID
+
+            fetch(`https://your-backend-url.com/api/favorites`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ workerId, isFavorite })
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
+            .then(data => {
+                console.log('Favorite status updated:', data);
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+        }
+
+        // Highlight selected date
+        function selectDate(button, date) {
+            console.log('Selecting date:', date);
+            document.querySelectorAll('.date-btn').forEach(btn => {
+                btn.classList.remove('bg-blue-500', 'text-white');
+                btn.classList.add('bg-gray-200', 'text-black');
+            });
+            button.classList.remove('bg-gray-200', 'text-black');
+            button.classList.add('bg-blue-500', 'text-white');
+            selectedDate = date;
+        }
+
+        // Highlight selected time
+        function selectTime(button, time) {
+            console.log('Selecting time:', time);
+            document.querySelectorAll('.time-btn').forEach(btn => {
+                btn.classList.remove('bg-blue-500', 'text-white');
+                btn.classList.add('bg-gray-200', 'text-black');
+            });
+            button.classList.remove('bg-gray-200', 'text-black');
+            button.classList.add('bg-blue-500', 'text-white');
+            selectedTime = time;
+        }
+
+        // Highlight selected service type
+        function handleButtonClick(button, service) {
+            console.log('Selecting service:', service);
+            document.querySelectorAll('.service-btn').forEach(btn => {
+                btn.classList.remove('bg-blue-200', 'text-blue-500');
+                btn.classList.add('text-gray-500');
+            });
+            button.classList.remove('text-gray-500');
+            button.classList.add('bg-blue-200', 'text-blue-500');
+            selectedService = service;
+        }
+
+        // Highlight selected category
+        function selectCategory(button, category) {
+            console.log('Selecting category:', category);
+            document.querySelectorAll('.category-btn').forEach(btn => {
+                btn.classList.remove('bg-blue-300', 'text-blue-500');
+                btn.classList.add('bg-white', 'text-black');
+            });
+            button.classList.remove('bg-white', 'text-black');
+            button.classList.add('bg-blue-300', 'text-blue-500');
+            selectedCategory = category;
+        }
+
+        // Confirm booking
+        function confirmBooking() {
+            const mobileNumber = document.getElementById('mobile-number').value;
+            if (!mobileNumber) {
+                alert("Please enter your mobile number.");
+                return;
+            }
+
+            // Prepare the data to send to the backend
+            const bookingData = {
+                date: selectedDate,
+                time: selectedTime,
+                mobile: mobileNumber,
+                service: selectedService,
+                category: selectedCategory
+            };
+
+            // Send the data to the backend
+            fetch('https://your-backend-url.com/api/bookings', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(bookingData)
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
+            .then(data => {
+                console.log('Success:', data);
+                alert('Booking confirmed!');
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('There was a problem with your booking.');
+            });
+        }
+
+        // Generate future dates dynamically
+        function generateDates() {
+            const dateContainer = document.getElementById('date-container');
+            const today = new Date();
+            for (let i = 0; i < 7; i++) {
+                const futureDate = new Date(today);
+                futureDate.setDate(today.getDate() + i);
+
+                const day = futureDate.toLocaleString('default', { weekday: 'short' });
+                const month = futureDate.toLocaleString('default', { month: 'short' });
+                const date = futureDate.getDate();
+
+                const button = document.createElement('button');
+                button.className = 'bg-gray-200 px-3 py-2 rounded-lg text-center date-btn';
+                button.innerHTML = `<p class="text-sm">${month}</p><p class="font-bold">${date}</p><p class="text-sm">${day}</p>`;
+                button.onclick = () => selectDate(button, `${month} ${date} ${day}`);
+
+                dateContainer.appendChild(button);
+            }
+        }
+
+        // Initialize dates on page load
+        window.onload = generateDates;
+    </script>
+</body>
+</html>

@@ -62,54 +62,39 @@
               </div>
             </div>
           </div>
-          
-          <style>
-            @keyframes carousel {
-              0%, 25% { transform: translateX(0%); }
-              35%, 60% { transform: translateX(-100%); }
-              70%, 95% { transform: translateX(-200%); }
-            }
-            .animate-carousel {
-              animation: carousel 10s infinite;
-            }
-          </style>
-          
-
       </section>
       
-      
-
     <!-- Categories -->
     <section class="px-8 py-12 bg-gray-50">
       <h2 class="text-2xl font-bold mb-6">Our Categories</h2>
       <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-8">
-        <div class="text-center bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition">
+        <div id="plumbing" data-category="Plumbing" class="category-card text-center bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition cursor-pointer">
           <i class="fas fa-faucet text-5xl text-blue-500"></i>
           <p class="mt-4 text-lg font-semibold">Plumbing</p>
         </div>
-        <div class="text-center bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition">
+        <div id="cleaning" data-category="Cleaning" class="category-card text-center bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition cursor-pointer">
           <i class="fas fa-broom text-5xl text-blue-500"></i>
           <p class="mt-4 text-lg font-semibold">Cleaning</p>
         </div>
-        <div class="text-center bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition">
+        <div id="repairs" data-category="Repairs" class="category-card text-center bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition cursor-pointer">
           <i class="fas fa-wrench text-5xl text-blue-500"></i>
           <p class="mt-4 text-lg font-semibold">Repairs</p>
         </div>
-        <div class="text-center bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition">
+        <div id="electrical" data-category="Electrical" class="category-card text-center bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition cursor-pointer">
           <i class="fas fa-plug text-5xl text-blue-500"></i>
           <p class="mt-4 text-lg font-semibold">Electrical</p>
         </div>
-        <div class="text-center bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition">
+        <div id="laundry" data-category="Laundry" class="category-card text-center bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition cursor-pointer">
           <i class="fas fa-soap text-5xl text-blue-500"></i>
           <p class="mt-4 text-lg font-semibold">Laundry</p>
         </div>
-        <div class="text-center bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition">
+        <div id="all-services" data-category="All Services" class="category-card text-center bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition cursor-pointer">
           <i class="fas fa-list text-5xl text-blue-500"></i>
           <p class="mt-4 text-lg font-semibold">All Services</p>
         </div>
       </div>
     </section>
-
+    
     <!-- Order Again -->
     <section class="px-8 py-12 bg-white">
       <h2 class="text-2xl font-bold mb-6">Order Again</h2>

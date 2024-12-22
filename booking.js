@@ -72,3 +72,38 @@ document.getElementById('close-modal')?.addEventListener('click', () => {
   const modal = document.getElementById('settings-modal');
   modal?.classList.add('hidden');
 });
+
+const categoryCards = document.querySelectorAll('.category-card');
+
+function handleCategorySelection(event) {
+  const category = event.currentTarget.dataset.category;
+
+  // Navigate to the respective page for the selected category (replace with your actual URLs)
+  switch (category) {
+    case 'Plumbing':
+      window.location.href = "./find-expert-plumbers.html";  // Replace with actual URL
+      break;
+    case 'Cleaning':
+      window.location.href = "./cleaning.html";  // Replace with actual URL
+      break;
+    case 'Repairs':
+      window.location.href = "./repairs.html";  // Replace with actual URL
+      break;
+    case 'Electrical':
+      window.location.href = "./electrical.html";  // Replace with actual URL
+      break;
+    case 'Laundry':
+      window.location.href = "./laundry.html";  // Replace with actual URL
+      break;
+    case 'All Services':
+      window.location.href = "./all-services.html";  // Replace with actual URL
+      break;
+    default:
+      break;
+  }
+}
+
+// Add event listeners to all category cards
+categoryCards.forEach(card => {
+  card.addEventListener('click', handleCategorySelection);
+});

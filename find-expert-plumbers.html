@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./images/logo.png" type="image/x-icon">
+    <title>i-Service Plumbers</title>
+    <link rel="stylesheet" href="find-expert-plumbers.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="bg-gray-100 h-screen">
+    <div class="p-4 bg-white rounded-lg shadow-lg h-full">
+        <div class="flex items-center mb-4">
+            <i class="fas fa-arrow-left text-2xl text-gray-700 cursor-pointer" onclick="goBack()"></i>
+            <h1 class="flex-grow text-center text-2xl font-bold text-gray-800">Find Expert Plumbers</h1>
+        </div>
+
+        <div id="plumbers-list">
+            <!-- Plumber card template will go here -->
+            <div class="plumber-card flex items-center bg-blue-50 p-4 mb-4 rounded-lg shadow-sm cursor-pointer transition-transform transform hover:scale-105">
+                <img src="https://via.placeholder.com/80" alt="John Micheal" class="plumber-image w-20 h-20 rounded-lg object-cover mr-4">
+                <div class="flex-1">
+                    <h2 class="text-lg font-bold text-gray-800">John Micheal</h2>
+                    <p class="text-sm text-blue-600">Expert Home Plumber</p>
+                    <div class="flex justify-between text-sm text-gray-600 mt-2">
+                        <div>
+                            <i class="fas fa-star text-yellow-500"></i> Rating: <span class="font-medium">4.3</span>
+                        </div>
+                        <div>
+                            Total Jobs: <span class="font-medium">213</span>
+                        </div>
+                        <div>
+                            Rate: <span class="font-medium">5k/hr</span>
+                        </div>
+                    </div>
+                </div>
+                <i class="fas fa-bookmark text-gray-400 text-xl cursor-pointer" onclick="toggleBookmark(this)"></i>
+            </div>
+            
+            <div class="plumber-card flex items-center bg-blue-50 p-4 mb-4 rounded-lg shadow-sm cursor-pointer transition-transform transform hover:scale-105">
+                <img src="https://via.placeholder.com/80" alt="John Micheal" class="plumber-image w-20 h-20 rounded-lg object-cover mr-4">
+                <div class="flex-1">
+                    <h2 class="text-lg font-bold text-gray-800">John Micheal</h2>
+                    <p class="text-sm text-blue-600">Expert Home Plumber</p>
+                    <div class="flex justify-between text-sm text-gray-600 mt-2">
+                        <div>
+                            <i class="fas fa-star text-yellow-500"></i> Rating: <span class="font-medium">4.3</span>
+                        </div>
+                        <div>
+                            Total Jobs: <span class="font-medium">213</span>
+                        </div>
+                        <div>
+                            Rate: <span class="font-medium">5k/hr</span>
+                        </div>
+                    </div>
+                </div>
+                <i class="fas fa-bookmark text-gray-400 text-xl cursor-pointer" onclick="toggleBookmark(this)"></i>
+            </div>
+
+            <div class="plumber-card flex items-center bg-blue-50 p-4 mb-4 rounded-lg shadow-sm cursor-pointer transition-transform transform hover:scale-105">
+                <img src="https://via.placeholder.com/80" alt="John Micheal" class="plumber-image w-20 h-20 rounded-lg object-cover mr-4">
+                <div class="flex-1">
+                    <h2 class="text-lg font-bold text-gray-800">John Micheal</h2>
+                    <p class="text-sm text-blue-600">Expert Home Plumber</p>
+                    <div class="flex justify-between text-sm text-gray-600 mt-2">
+                        <div>
+                            <i class="fas fa-star text-yellow-500"></i> Rating: <span class="font-medium">4.3</span>
+                        </div>
+                        <div>
+                            Total Jobs: <span class="font-medium">213</span>
+                        </div>
+                        <div>
+                            Rate: <span class="font-medium">5k/hr</span>
+                        </div>
+                    </div>
+                </div>
+                <i class="fas fa-bookmark text-gray-400 text-xl cursor-pointer" onclick="toggleBookmark(this)"></i>
+            </div>
+        </div>
+    </div>
+    <script src="find-expert-plumbers.js"></script>
+</body>
+</html>

@@ -2,6 +2,14 @@
     pointer-events: none;
     animation: fadeIn 0.3s ease-in-out;
   }
+
+  .category-card i {
+    display: inline-block;
+    text-align: center;
+    line-height: 1;
+    margin: 0 auto;
+  }
+  
   
   @keyframes fadeIn {
     from {
@@ -13,4 +21,11 @@
       transform: translateY(0);
     }
   }
-  
+  @keyframes carousel {
+    0%, 25% { transform: translateX(0%); }
+    35%, 60% { transform: translateX(-100%); }
+    70%, 95% { transform: translateX(-200%); }
+  }
+  .animate-carousel {
+    animation: carousel 10s infinite;
+  }

@@ -107,3 +107,26 @@ function handleCategorySelection(event) {
 categoryCards.forEach(card => {
   card.addEventListener('click', handleCategorySelection);
 });
+
+document.getElementById('notification-bell').addEventListener('click', function() {
+  // Request reminder from the server
+  fetch('/request-reminder', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({ userId: 'client-id' }) // Replace 'client-id' with the actual client ID
+  })
+  .then(response => response.json())
+  .then(data => {
+    if (data.success) {
+      alert('Reminder has been sent to the client.');
+    } else {
+      alert('Failed to send reminder.');
+    }
+  })
+  .catch(error => {
+    console.error('Error:', error);
+    alert('An error occurred while sending the reminder.');
+  });
+});

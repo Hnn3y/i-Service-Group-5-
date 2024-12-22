@@ -9,7 +9,14 @@
     line-height: 1;
     margin: 0 auto;
   }
-  
+
+.overflow-x-auto::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 4px;
+}
+.overflow-x-auto::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+}
   
   @keyframes fadeIn {
     from {

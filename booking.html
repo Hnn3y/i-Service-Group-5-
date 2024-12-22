@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="./images/logo.png" type="image/x-icon">
+  <link rel="stylesheet" href="booking.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <script src="https://cdn.tailwindcss.com"></script>
   <title>iService</title>
@@ -131,20 +132,21 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-200 py-6 px-8 mt-12">
+    <footer class="bg-gray-200 py-6 px-8 mt-12 mb-4">
       <div class="flex justify-between items-center text-gray-600">
         <div class="flex items-center space-x-6">
-          <i class="fas fa-home text-2xl text-blue-500"></i>
-          <i class="fas fa-calendar text-2xl hover:text-blue-500 transition"></i>
-          <i class="fas fa-user text-2xl hover:text-blue-500 transition"></i>
-          <i class="fas fa-cog text-2xl hover:text-blue-500 transition"></i>
-          <i class="fas fa-envelope text-2xl hover:text-blue-500 transition"></i>
+          <i id="home-icon" data-page="Home" class="fas fa-home text-2xl cursor-pointer text-gray-600 hover:text-blue-500 transition"></i>
+          <i id="calendar-icon" data-page="Calendar" class="fas fa-calendar text-2xl cursor-pointer text-gray-600 hover:text-blue-500 transition"></i>
+          <i id="user-icon" data-page="User Profile" class="fas fa-user text-2xl cursor-pointer text-gray-600 hover:text-blue-500 transition"></i>
+          <i id="settings-icon" data-page="Settings" class="fas fa-cog text-2xl cursor-pointer text-gray-600 hover:text-blue-500 transition"></i>
+          <i id="message-icon" data-page="Messages" class="fas fa-envelope text-2xl cursor-pointer text-gray-600 hover:text-blue-500 transition"></i>
         </div>
         <p class="text-sm">© 2024 iService. All rights reserved.</p>
       </div>
     </footer>
+        
   </div>
 
-  <script src="script.js"></script>
+  <script src="booking.js"></script>
 </body>
 </html>

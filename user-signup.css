@@ -1,17 +1,19 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
-:root{
+
+:root {
     --pri-clr: #FBFBFB;
     --sec-clr: #0B0B0B;
     --ascent-clr: #1133F5;
-    --trans-ascent-clr: #1133F5;
-    --light-blue-clr: #117BF5;
+    --trans-ascent-clr: rgba(17, 51, 245, 0.8);
+    --light-blue-clr: #1133F5;
 }
-body{
-    background-image: url(/i-Service-Group-5-/SIGNUP-PAGES/user-signups/assets/sign\ up\ screen\ pic.png);
+
+body {
+    background-image: url(./Images/bg-signup-selection.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -20,28 +22,30 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
+}
 
+header, form {
+    z-index: 2;
 }
-header, form{
-    z-index: 1;
-}
-body .overlay{
-    background-color: rgba(255, 255, 255, .6);
+
+.overlay {
+    background-color: rgba(255, 255, 255, 0.6);
     position: absolute;
     inset: 0;
+    z-index: 1;
 }
-form .form-content{
+
+form .form-content {
     background-color: var(--trans-ascent-clr);
     padding: 2rem 1rem;
 }
+
 input[type="submit"],
-.form-buttons a{
+.form-buttons a {
     color: var(--ascent-clr);
     font-weight: 700;
 }
-/* input::placeholder{
-    color: rgba(255, 255, 255, .8);
-} */
 
 input::placeholder {
     color: rgba(255, 255, 255, 0.8); /* Modern browsers */

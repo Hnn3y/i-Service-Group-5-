@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="./images/logo.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="artisan-login.css">
+  <title>Artisan Login Page</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-[url('./Images/bg-signup-selection.png')] bg-cover h-screen flex flex-col justify-center items-center relative">
+
+  <!-- Login Card -->
+  <div class="relative z-10 p-8 w-full max-w-md bg-gray-800 bg-opacity-70 rounded-lg shadow-lg">
+    <!-- Logo and Title -->
+    <div class="text-center mb-6">
+      <div class="flex justify-center items-center gap-4">
+        <div class="rounded-full p-2">
+          <img src="./images/logo.png" alt="Artisan Logo" class="h-16 w-16 object-contain">
+        </div>
+      </div>
+      <h1 class="text-3xl font-bold text-white mt-4">Artisan Login</h1>
+    </div>
+
+    <!-- Form Fields -->
+    <form id="artisanLoginForm" class="bg-gray-700 p-6 rounded-lg">
+      <!-- Email or Phone Input -->
+      <div class="mb-4">
+        <label for="artisan-email" class="sr-only">Email Address/Phone Number</label>
+        <div class="relative">
+          <span class="absolute inset-y-0 left-0 flex items-center pl-3 text-gray-300">
+            <i class="fas fa-envelope"></i>
+          </span>
+          <input type="text" id="artisan-email" placeholder="Email Address/Phone Number" class="w-full pl-10 py-2 px-4 border border-gray-500 rounded-md focus:ring-gray-500 focus:border-gray-500 bg-gray-600 text-gray-300">
+        </div>
+      </div>
+
+      <!-- Password Input -->
+      <div class="mb-4">
+        <label for="artisan-password" class="sr-only">Enter Password</label>
+        <div class="relative">
+          <span class="absolute inset-y-0 left-0 flex items-center pl-3 text-gray-300">
+            <i class="fas fa-lock"></i>
+          </span>
+          <input type="password" id="artisan-password" placeholder="Enter Password" class="w-full pl-10 py-2 px-4 border border-gray-500 rounded-md focus:ring-gray-500 focus:border-gray-500 bg-gray-600 text-gray-300">
+        </div>
+      </div>
+
+      <!-- Forgotten Password -->
+      <div class="mb-4 text-right">
+        <a href="#" class="text-sm text-gray-400 hover:underline">Forgotten password?</a>
+      </div>
+
+      <!-- Login Button -->
+      <div class="mb-4 flex justify-center">
+        <button type="submit" class="w-3/4 bg-white text-blue-900 py-2 px-4 rounded-md hover:bg-blue-600 hover:text-white transition duration-300">
+          Login
+        </button>
+      </div>
+
+      <!-- Facebook Login Button -->
+      <div class="mb-4 flex justify-center">
+        <button type="button" class="w-3/4 bg-white text-blue-900 py-2 px-4 rounded-md flex items-center justify-center gap-2 hover:bg-blue-600 hover:text-white transition duration-300">
+          <i class="fab fa-facebook-f"></i>
+          Login With Facebook
+        </button>
+      </div>
+    </form>
+
+    <!-- Sign Up Link -->
+    <div class="text-center mt-4">
+      <p class="text-sm text-gray-400">Don’t have an account yet? <a href="./artisan-signup.html" class="text-blue-400 font-medium hover:underline">Sign Up</a></p>
+    </div>
+  </div>
+  <p id="response-message" class="bg-red-600 w-full text-white flex justify-center absolute top-0 isolate"></p>
+
+  <script src="artisan-login.js"></script>
+</body>
+</html>

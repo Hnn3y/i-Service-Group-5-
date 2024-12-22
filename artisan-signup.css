@@ -1,50 +1,56 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
-:root{
+
+:root {
     --pri-clr: #FBFBFB;
     --sec-clr: #0B0B0B;
     --ascent-clr: #1133F5;
     --trans-ascent-clr: #1133F5;
     --light-blue-clr: #117BF5;
 }
-body{
-    background-image: url(/i-Service-Group-5-/SIGNUP-PAGES/user-signups/assets/sign\ up\ screen\ pic.png);
+
+body {
+    background-image: url(./Images/bg-signup-selection.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    /* height: 100vh; */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
+}
 
+header,
+form {
+    z-index: 2;
 }
-header, form{
-    z-index: 1;
-}
-body .overlay{
+
+.overlay {
     background-color: rgba(255, 255, 255, .6);
     position: absolute;
     inset: 0;
+    z-index: 1;
 }
-form .form-content{
+
+form .form-content {
     background-color: var(--trans-ascent-clr);
     padding: 2rem 1rem;
-
-
 }
-form .form-data{
+
+form .form-data {
     display: grid;
-    /* grid-template-columns: repeat(2, 1fr); */
+    gap: 1rem; /* Adjusted the gap for better spacing */
 }
 
-input::placeholder{
+input::placeholder {
     color: rgba(255, 255, 255, .8);
 }
-input[type="submit"]{
+
+input[type="submit"] {
     color: var(--ascent-clr);
     font-weight: 700;
 }

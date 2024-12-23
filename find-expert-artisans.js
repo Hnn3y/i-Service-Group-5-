@@ -27,9 +27,9 @@ function loadBookmarks() {
     return new Set(bookmarkedArtisans);
 }
 
-async function fetchArtisans() {
+async function fetchArtisans(artisanType) {
     try {
-        const response = await fetch('https://api.example.com/artisans'); // Replace with actual API endpoint
+        const response = await fetch(`https://api.example.com/artisans?type=${artisanType}`); // Replace with actual API endpoint
         const artisans = await response.json();
         const artisansList = document.getElementById('artisans-list');
         artisansList.innerHTML = '';  // Clear existing list if any
@@ -70,7 +70,12 @@ async function fetchArtisans() {
 function bookArtisan(artisanId) {
     console.log(`Booking artisan with ID: ${artisanId}`); // Debugging statement
     // Redirect to the booking page for the selected artisan
-    window.location.href = `./?id=${artisanId}`;
+    window.location.href = `./booking.html?id=${artisanId}`;
 }
 
-document.addEventListener('DOMContentLoaded', fetchArtisans);
+document.addEventListener('DOMContentLoaded', () => {
+    const urlParams = new URLSearchParams(window.location.search);
+    const artisanType = urlParams.get('type') || 'plumbers'; // Default to 'plumbers' if type is not specified
+    document.getElementById('page-title').textContent = `Find Expert ${artisanType.charAt(0).toUpperCase() + artisanType.slice(1)}`;
+    fetchArtisans(artisanType);
+});

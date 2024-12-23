@@ -14,7 +14,8 @@
     <!-- Header -->
     <header class="flex items-center justify-between px-8 py-6 bg-gray-100 shadow">
       <div class="flex items-center space-x-4">
-        <img src="/Images/Booking logo.jpg" alt="User" class="w-12 h-12 rounded-full shadow-lg">
+        <!-- Profile Icon for Users without an Account -->
+        <i class="fas fa-user-circle text-4xl text-gray-600"></i>
       </div>
       <h1 class="text-2xl font-bold">Home</h1>
       <i id="notification-bell" class="fas fa-bell text-gray-600 text-2xl hover:text-blue-500 transition-colors cursor-pointer"></i>
@@ -36,7 +37,7 @@
         <div class="text-center lg:text-left lg:w-1/2">
           <p class="text-3xl font-bold">Special Offer: 30% Off on All Services</p>
           <p class="text-lg mt-2">Use Promo Code: <strong>IJpro5</strong></p>
-          <button class="bg-white text-blue-500 px-8 py-3 mt-6 rounded-lg font-bold shadow-md hover:shadow-lg transition">
+          <button id="promo-book-now" class="bg-white text-blue-500 px-8 py-3 mt-6 rounded-lg font-bold shadow-md hover:shadow-lg transition">
             Book Now
           </button>
         </div>
@@ -49,7 +50,7 @@
               <div class="flex animate-carousel">
                 <!-- Slide 1 -->
                 <div class="w-full shrink-0">
-                  <img src="./images/promo.jpg" alt="Promo 1" class="w-full h-40 lg:h-48 object-cover">
+                  <img src="./images/promo 3.jpg" alt="Promo 1" class="w-full h-40 lg:h-48 object-cover">
                 </div>
                 <!-- Slide 2 -->
                 <div class="w-full shrink-0">
@@ -57,7 +58,7 @@
                 </div>
                 <!-- Slide 3 -->
                 <div class="w-full shrink-0">
-                  <img src="./images/promo 1.jpg" alt="Promo 3" class="w-full h-40 lg:h-48 object-cover">
+                  <img src="./images/promo 4.jpg" alt="Promo 3" class="w-full h-40 lg:h-48 object-cover">
                 </div>
               </div>
             </div>
@@ -65,35 +66,35 @@
       </section>
       
     <!-- Categories -->
-    <section class="px-8 py-12 bg-gray-50">
-      <h2 class="text-2xl font-bold mb-6">Our Categories</h2>
-      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-8">
-        <div id="plumbing" data-category="Plumbing" class="category-card text-center bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition cursor-pointer">
-          <i class="fas fa-faucet text-5xl text-blue-500"></i>
-          <p class="mt-4 text-lg font-semibold">Plumbing</p>
+    <section class="px-4 py-8 bg-gray-50">
+      <h2 class="text-2xl font-bold mb-4 text-center">Our Categories</h2>
+      <div id="category-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-6xl mx-auto">
+        <div id="plumbing" data-category="Plumbing" class="category-card text-center bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition cursor-pointer">
+          <i class="fas fa-faucet text-4xl text-blue-500"></i>
+          <p class="mt-2 text-lg font-semibold">Plumbing</p>
         </div>
-        <div id="cleaning" data-category="Cleaning" class="category-card text-center bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition cursor-pointer">
-          <i class="fas fa-broom text-5xl text-blue-500"></i>
-          <p class="mt-4 text-lg font-semibold">Cleaning</p>
+        <div id="cleaning" data-category="Cleaning" class="category-card text-center bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition cursor-pointer">
+          <i class="fas fa-broom text-4xl text-blue-500"></i>
+          <p class="mt-2 text-lg font-semibold">Cleaning</p>
         </div>
-        <div id="repairs" data-category="Repairs" class="category-card text-center bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition cursor-pointer">
-          <i class="fas fa-wrench text-5xl text-blue-500"></i>
-          <p class="mt-4 text-lg font-semibold">Repairs</p>
+        <div id="repairs" data-category="Repairs" class="category-card text-center bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition cursor-pointer">
+          <i class="fas fa-wrench text-4xl text-blue-500"></i>
+          <p class="mt-2 text-lg font-semibold">Repairs</p>
         </div>
-        <div id="electrical" data-category="Electrical" class="category-card text-center bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition cursor-pointer">
-          <i class="fas fa-plug text-5xl text-blue-500"></i>
-          <p class="mt-4 text-lg font-semibold">Electrical</p>
+        <div id="electrical" data-category="Electrical" class="category-card text-center bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition cursor-pointer">
+          <i class="fas fa-plug text-4xl text-blue-500"></i>
+          <p class="mt-2 text-lg font-semibold">Electrical</p>
         </div>
-        <div id="laundry" data-category="Laundry" class="category-card text-center bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition cursor-pointer">
-          <i class="fas fa-soap text-5xl text-blue-500"></i>
-          <p class="mt-4 text-lg font-semibold">Laundry</p>
+        <div id="laundry" data-category="Laundry" class="category-card text-center bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition cursor-pointer">
+          <i class="fas fa-soap text-4xl text-blue-500"></i>
+          <p class="mt-2 text-lg font-semibold">Laundry</p>
         </div>
-        <div id="all-services" data-category="All Services" class="category-card text-center bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition cursor-pointer">
-          <i class="fas fa-list text-5xl text-blue-500"></i>
-          <p class="mt-4 text-lg font-semibold">All Services</p>
+        <div id="all-services" data-category="All Services" class="category-card text-center bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition cursor-pointer">
+          <i class="fas fa-list text-4xl text-blue-500"></i>
+          <p class="mt-2 text-lg font-semibold">All Services</p>
         </div>
       </div>
-    </section>
+    </section>    
     
    <!-- Order Again -->
 <section class="px-8 py-12 bg-white">

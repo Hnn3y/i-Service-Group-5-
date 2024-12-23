@@ -6,11 +6,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function redirectToSignup() {
     // Redirect to the signup page if the user is not logged in
-    window.location.href = './signup.html';
+    window.location.href = './signup-selection.html';
+  }
+
+  function redirectToArtisans(category) {
+    // Redirect to the artisans page with the selected category
+    window.location.href = `./artisans-booking.html?category=${category}`;
   }
 
   // Add event listener to the promo "Book Now" button
-  promoBookNowButton.addEventListener('click', redirectToSignup);
+  promoBookNowButton.addEventListener('click', () => redirectToArtisans('promo'));
+
+  searchButton.addEventListener('click', redirectToSignup);
 
   // Add event listeners to the order again elements (if applicable)
   orderAgainElements.forEach(element => {
@@ -19,7 +26,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Notification click handler
   document.getElementById('notification-bell').addEventListener('click', function() {
-    // Request reminder from the server
     fetch('/request-reminder', {
       method: 'POST',
       headers: {
@@ -111,6 +117,14 @@ document.addEventListener('DOMContentLoaded', () => {
     modal?.classList.add('hidden');
   });
 
+  // Add category click event listeners
+  categoryCards.forEach(card => {
+    card.addEventListener('click', () => {
+      const category = card.dataset.category;
+      redirectToArtisans(category);
+    });
+  });
+
   // Add services on "All Services" click
   document.getElementById('all-services').addEventListener('click', (event) => {
     event.preventDefault();
@@ -125,8 +139,9 @@ document.addEventListener('DOMContentLoaded', () => {
       { id: 'moving', category: 'Moving', icon: 'fa-truck' },
       { id: 'pest-control', category: 'Pest Control', icon: 'fa-bug' },
       { id: 'roofing', category: 'Roofing', icon: 'fa-home' },
-      { id: 'window-cleaning', category: 'Window Cleaning', icon: 'fa-window' },
-      { id: 'handyman', category: 'Handyman', icon: 'fa-tools' }
+      { id: 'window-cleaning', category: 'Window Cleaning', icon: 'fa-window-restore' },
+      { id: 'handyman', category: 'Handyman', icon: 'fa-tools' },
+      { id: 'catering', category: 'Catering', icon: 'fa-utensils' }
     ];
 
     // Append additional services to the grid
@@ -140,6 +155,11 @@ document.addEventListener('DOMContentLoaded', () => {
         <p class="mt-2 text-lg font-semibold">${service.category}</p>
       `;
       categoryGrid.appendChild(serviceCard);
+
+      // Add click event listener to new service cards
+      serviceCard.addEventListener('click', () => {
+        redirectToArtisans(service.category);
+      });
     });
 
     document.getElementById('all-services').style.display = 'none';

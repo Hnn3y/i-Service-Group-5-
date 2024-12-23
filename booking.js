@@ -2,15 +2,16 @@ document.addEventListener('DOMContentLoaded', () => {
   const categoryCards = document.querySelectorAll('.category-card');
   const promoBookNowButton = document.getElementById('promo-book-now');
   const searchButton = document.querySelector('.fa-search').closest('button');
-  const orderAgainElements = document.querySelectorAll('.order-again-element'); // Add a class to these elements if needed
+  const orderAgainElements = document.querySelectorAll('.order-again-element');
 
   function redirectToSignup() {
     // Redirect to the signup page if the user is not logged in
     window.location.href = './signup.html';
   }
+
   // Add event listener to the promo "Book Now" button
   promoBookNowButton.addEventListener('click', redirectToSignup);
-  
+
   // Add event listeners to the order again elements (if applicable)
   orderAgainElements.forEach(element => {
     element.addEventListener('click', redirectToSignup);
@@ -109,37 +110,38 @@ document.addEventListener('DOMContentLoaded', () => {
     const modal = document.getElementById('settings-modal');
     modal?.classList.add('hidden');
   });
-}); 
 
-document.getElementById('all-services').addEventListener('click', (event) => {
-  event.preventDefault();
+  // Add services on "All Services" click
+  document.getElementById('all-services').addEventListener('click', (event) => {
+    event.preventDefault();
 
-  const categoryGrid = document.getElementById('category-grid');
+    const categoryGrid = document.getElementById('category-grid');
 
-  // Array of additional services
-  const additionalServices = [
-    { id: 'painting', category: 'Painting', icon: 'fa-paint-roller' },
-    { id: 'gardening', category: 'Gardening', icon: 'fa-seedling' },
-    { id: 'carpentry', category: 'Carpentry', icon: 'fa-hammer' },
-    { id: 'moving', category: 'Moving', icon: 'fa-truck' },
-    { id: 'pest-control', category: 'Pest Control', icon: 'fa-bug' },
-    { id: 'roofing', category: 'Roofing', icon: 'fa-home' },
-    { id: 'window-cleaning', category: 'Window Cleaning', icon: 'fa-window' },
-    { id: 'handyman', category: 'Handyman', icon: 'fa-tools' }
-  ];
+    // Array of additional services
+    const additionalServices = [
+      { id: 'painting', category: 'Painting', icon: 'fa-paint-roller' },
+      { id: 'gardening', category: 'Gardening', icon: 'fa-seedling' },
+      { id: 'carpentry', category: 'Carpentry', icon: 'fa-hammer' },
+      { id: 'moving', category: 'Moving', icon: 'fa-truck' },
+      { id: 'pest-control', category: 'Pest Control', icon: 'fa-bug' },
+      { id: 'roofing', category: 'Roofing', icon: 'fa-home' },
+      { id: 'window-cleaning', category: 'Window Cleaning', icon: 'fa-window' },
+      { id: 'handyman', category: 'Handyman', icon: 'fa-tools' }
+    ];
 
-  // Append additional services to the grid
-  additionalServices.forEach(service => {
-    const serviceCard = document.createElement('div');
-    serviceCard.id = service.id;
-    serviceCard.dataset.category = service.category;
-    serviceCard.className = 'category-card text-center bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition cursor-pointer';
-    serviceCard.innerHTML = `
-      <i class="fas ${service.icon} text-4xl text-blue-500"></i>
-      <p class="mt-2 text-lg font-semibold">${service.category}</p>
-    `;
-    categoryGrid.appendChild(serviceCard);
+    // Append additional services to the grid
+    additionalServices.forEach(service => {
+      const serviceCard = document.createElement('div');
+      serviceCard.id = service.id;
+      serviceCard.dataset.category = service.category;
+      serviceCard.className = 'category-card text-center bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition cursor-pointer';
+      serviceCard.innerHTML = `
+        <i class="fas ${service.icon} text-4xl text-blue-500"></i>
+        <p class="mt-2 text-lg font-semibold">${service.category}</p>
+      `;
+      categoryGrid.appendChild(serviceCard);
+    });
+
+    document.getElementById('all-services').style.display = 'none';
   });
-
-  document.getElementById('all-services').style.display = 'none';
 });

@@ -8,18 +8,26 @@
     <script src="https://kit.fontawesome.com/ee600e9388.js" crossorigin="anonymous"></script>
     <title>Auth selection</title>
     <link rel="stylesheet" href="auth.css">
+    <style>
+        .background {
+            background-image: url('./images/background1.jpg');
+            background-size: cover;
+            background-position: center;
+            transition: background-image 1s ease-in-out;
+        }
+    </style>
 </head>
-<body class="h-screen pt-[6rem] flex justify-center items-start relative">
+<body class="h-screen pt-[6rem] flex justify-center items-start relative background">
     <div class="overlay"></div>
     <div class="container w-max p-4 flex flex-col justify-start items-center gap-32 ">
-    <div class="logo z-10">
-        <img class="w-[12rem]" src="../images/logo.png" alt="">
+        <div class="logo z-10">
+            <img class="w-[12rem]" src="../images/logo.png" alt="">
+        </div>
+        <div class="link-box flex flex-col items-center gap-8 z-10 rounded-xl">
+            <a href="./signup-selection.html" id="signup-link">Sign up</a>
+            <a href="../LOGIN-PAGES/user-login/index.html" id="login-link">Login</a>
+        </div>
     </div>
-
-    <div class="link-box flex flex-col items-center gap-8 z-10">
-        <a href="/Sign-Up Selection Screen/Index.html">Sign up</a>
-        <a href="../LOGIN-PAGES/user-login/index.html">Login</a>
-    </div>
-</div>
+    <script src="auth.js"></script>
 </body>
 </html>
